@@ -12,25 +12,10 @@ var move = true
 
 func _physics_process(delta):
 	#var collision = move_and_collide(Vector2.DOWN * delta * move_speed)
-	if move:
-		position += direction * delta
-		checkForBorderHit()
-		checkForBottomReached()
+	pass
 	
 func kill():
 	queue_free()
-
-func checkForBorderHit():
-	if position.x < 0 or position.x >= screenWidth:
-		get_tree().call_group("Blockers1","reverseDirection")
-
-func checkForBottomReached():
-	if position.y >= screenHeight:
-		move = false
-
-func reverseDirection():
-	direction = -direction
-	position.y += vertical_distance
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
