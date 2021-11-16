@@ -18,6 +18,7 @@ func game_over():
 	
 func new_game():
 	$Player.position = ($PlayerStartPosition.position)
+	#$Wave.position = ($WaveStartPosition.position)
 	
 
 

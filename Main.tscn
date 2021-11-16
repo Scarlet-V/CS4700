@@ -10,217 +10,217 @@
 [node name="Main" type="Node"]
 script = ExtResource( 6 )
 
-[node name="Background2" type="Node2D" parent="."]
+[node name="Background" type="Node2D" parent="."]
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Background2"]
+[node name="Sprite" type="Sprite" parent="Background"]
 position = Vector2( 128, 128 )
 texture = ExtResource( 5 )
 
-[node name="Sprite2" type="Sprite" parent="Background2"]
+[node name="Sprite2" type="Sprite" parent="Background"]
 position = Vector2( 384, 128 )
 texture = ExtResource( 5 )
 
-[node name="Sprite3" type="Sprite" parent="Background2"]
+[node name="Sprite3" type="Sprite" parent="Background"]
 position = Vector2( 640, 128 )
 texture = ExtResource( 5 )
 
-[node name="Sprite4" type="Sprite" parent="Background2"]
+[node name="Sprite4" type="Sprite" parent="Background"]
 position = Vector2( 896, 128 )
 texture = ExtResource( 5 )
 
-[node name="Sprite5" type="Sprite" parent="Background2"]
+[node name="Sprite5" type="Sprite" parent="Background"]
 position = Vector2( 408, 344 )
 texture = ExtResource( 5 )
 offset = Vector2( -280, 40 )
 
-[node name="Sprite6" type="Sprite" parent="Background2"]
+[node name="Sprite6" type="Sprite" parent="Background"]
 position = Vector2( 408, 344 )
 texture = ExtResource( 5 )
 offset = Vector2( -24, 40 )
 
-[node name="Sprite7" type="Sprite" parent="Background2"]
+[node name="Sprite7" type="Sprite" parent="Background"]
 position = Vector2( 408, 344 )
 texture = ExtResource( 5 )
 offset = Vector2( 232, 40 )
 
-[node name="Sprite8" type="Sprite" parent="Background2"]
+[node name="Sprite8" type="Sprite" parent="Background"]
 position = Vector2( 408, 344 )
 texture = ExtResource( 5 )
 offset = Vector2( 488, 40 )
 
-[node name="Sprite9" type="Sprite" parent="Background2"]
+[node name="Sprite9" type="Sprite" parent="Background"]
 position = Vector2( 128, 640 )
 texture = ExtResource( 5 )
 
-[node name="Sprite10" type="Sprite" parent="Background2"]
+[node name="Sprite10" type="Sprite" parent="Background"]
 position = Vector2( 384, 640 )
 texture = ExtResource( 5 )
 
-[node name="Sprite11" type="Sprite" parent="Background2"]
+[node name="Sprite11" type="Sprite" parent="Background"]
 position = Vector2( 640, 640 )
 texture = ExtResource( 5 )
 
-[node name="Sprite12" type="Sprite" parent="Background2"]
+[node name="Sprite12" type="Sprite" parent="Background"]
 position = Vector2( 896, 640 )
 texture = ExtResource( 5 )
 
-[node name="Sprite13" type="Sprite" parent="Background2"]
+[node name="Sprite13" type="Sprite" parent="Background"]
 position = Vector2( 1152, 128 )
 texture = ExtResource( 5 )
 
-[node name="Sprite14" type="Sprite" parent="Background2"]
+[node name="Sprite14" type="Sprite" parent="Background"]
 position = Vector2( 1408, 128 )
 texture = ExtResource( 5 )
 
-[node name="Sprite15" type="Sprite" parent="Background2"]
+[node name="Sprite15" type="Sprite" parent="Background"]
 position = Vector2( 1664, 128 )
 texture = ExtResource( 5 )
 
-[node name="Sprite16" type="Sprite" parent="Background2"]
+[node name="Sprite16" type="Sprite" parent="Background"]
 position = Vector2( 1920, 128 )
 texture = ExtResource( 5 )
 
-[node name="Sprite17" type="Sprite" parent="Background2"]
+[node name="Sprite17" type="Sprite" parent="Background"]
 position = Vector2( 1432, 344 )
 texture = ExtResource( 5 )
 offset = Vector2( -280, 40 )
 
-[node name="Sprite18" type="Sprite" parent="Background2"]
+[node name="Sprite18" type="Sprite" parent="Background"]
 position = Vector2( 1432, 344 )
 texture = ExtResource( 5 )
 offset = Vector2( -24, 40 )
 
-[node name="Sprite19" type="Sprite" parent="Background2"]
+[node name="Sprite19" type="Sprite" parent="Background"]
 position = Vector2( 1432, 344 )
 texture = ExtResource( 5 )
 offset = Vector2( 232, 40 )
 
-[node name="Sprite20" type="Sprite" parent="Background2"]
+[node name="Sprite20" type="Sprite" parent="Background"]
 position = Vector2( 1432, 344 )
 texture = ExtResource( 5 )
 offset = Vector2( 488, 40 )
 
-[node name="Sprite21" type="Sprite" parent="Background2"]
+[node name="Sprite21" type="Sprite" parent="Background"]
 position = Vector2( 1152, 640 )
 texture = ExtResource( 5 )
 
-[node name="Sprite22" type="Sprite" parent="Background2"]
+[node name="Sprite22" type="Sprite" parent="Background"]
 position = Vector2( 1408, 640 )
 texture = ExtResource( 5 )
 
-[node name="Sprite23" type="Sprite" parent="Background2"]
+[node name="Sprite23" type="Sprite" parent="Background"]
 position = Vector2( 1664, 640 )
 texture = ExtResource( 5 )
 
-[node name="Sprite24" type="Sprite" parent="Background2"]
+[node name="Sprite24" type="Sprite" parent="Background"]
 position = Vector2( 1920, 640 )
 texture = ExtResource( 5 )
 
-[node name="Sprite25" type="Sprite" parent="Background2"]
+[node name="Sprite25" type="Sprite" parent="Background"]
 position = Vector2( 128, 896 )
 texture = ExtResource( 5 )
 
-[node name="Sprite26" type="Sprite" parent="Background2"]
+[node name="Sprite26" type="Sprite" parent="Background"]
 position = Vector2( 384, 896 )
 texture = ExtResource( 5 )
 
-[node name="Sprite27" type="Sprite" parent="Background2"]
+[node name="Sprite27" type="Sprite" parent="Background"]
 position = Vector2( 640, 896 )
 texture = ExtResource( 5 )
 
-[node name="Sprite28" type="Sprite" parent="Background2"]
+[node name="Sprite28" type="Sprite" parent="Background"]
 position = Vector2( 896, 896 )
 texture = ExtResource( 5 )
 
-[node name="Sprite29" type="Sprite" parent="Background2"]
+[node name="Sprite29" type="Sprite" parent="Background"]
 position = Vector2( 408, 1112 )
 texture = ExtResource( 5 )
 offset = Vector2( -280, 40 )
 
-[node name="Sprite30" type="Sprite" parent="Background2"]
+[node name="Sprite30" type="Sprite" parent="Background"]
 position = Vector2( 408, 1112 )
 texture = ExtResource( 5 )
 offset = Vector2( -24, 40 )
 
-[node name="Sprite31" type="Sprite" parent="Background2"]
+[node name="Sprite31" type="Sprite" parent="Background"]
 position = Vector2( 408, 1112 )
 texture = ExtResource( 5 )
 offset = Vector2( 232, 40 )
 
-[node name="Sprite32" type="Sprite" parent="Background2"]
+[node name="Sprite32" type="Sprite" parent="Background"]
 position = Vector2( 408, 1112 )
 texture = ExtResource( 5 )
 offset = Vector2( 488, 40 )
 
-[node name="Sprite33" type="Sprite" parent="Background2"]
+[node name="Sprite33" type="Sprite" parent="Background"]
 position = Vector2( 128, 1408 )
 texture = ExtResource( 5 )
 
-[node name="Sprite34" type="Sprite" parent="Background2"]
+[node name="Sprite34" type="Sprite" parent="Background"]
 position = Vector2( 384, 1408 )
 texture = ExtResource( 5 )
 
-[node name="Sprite35" type="Sprite" parent="Background2"]
+[node name="Sprite35" type="Sprite" parent="Background"]
 position = Vector2( 640, 1408 )
 texture = ExtResource( 5 )
 
-[node name="Sprite36" type="Sprite" parent="Background2"]
+[node name="Sprite36" type="Sprite" parent="Background"]
 position = Vector2( 896, 1408 )
 texture = ExtResource( 5 )
 
-[node name="Sprite37" type="Sprite" parent="Background2"]
+[node name="Sprite37" type="Sprite" parent="Background"]
 position = Vector2( 1152, 896 )
 texture = ExtResource( 5 )
 
-[node name="Sprite38" type="Sprite" parent="Background2"]
+[node name="Sprite38" type="Sprite" parent="Background"]
 position = Vector2( 1408, 896 )
 texture = ExtResource( 5 )
 
-[node name="Sprite39" type="Sprite" parent="Background2"]
+[node name="Sprite39" type="Sprite" parent="Background"]
 position = Vector2( 1664, 896 )
 texture = ExtResource( 5 )
 
-[node name="Sprite40" type="Sprite" parent="Background2"]
+[node name="Sprite40" type="Sprite" parent="Background"]
 position = Vector2( 1920, 896 )
 texture = ExtResource( 5 )
 
-[node name="Sprite41" type="Sprite" parent="Background2"]
+[node name="Sprite41" type="Sprite" parent="Background"]
 position = Vector2( 1432, 1112 )
 texture = ExtResource( 5 )
 offset = Vector2( -280, 40 )
 
-[node name="Sprite42" type="Sprite" parent="Background2"]
+[node name="Sprite42" type="Sprite" parent="Background"]
 position = Vector2( 1432, 1112 )
 texture = ExtResource( 5 )
 offset = Vector2( -24, 40 )
 
-[node name="Sprite43" type="Sprite" parent="Background2"]
+[node name="Sprite43" type="Sprite" parent="Background"]
 position = Vector2( 1432, 1112 )
 texture = ExtResource( 5 )
 offset = Vector2( 232, 40 )
 
-[node name="Sprite44" type="Sprite" parent="Background2"]
+[node name="Sprite44" type="Sprite" parent="Background"]
 position = Vector2( 1432, 1112 )
 texture = ExtResource( 5 )
 offset = Vector2( 488, 40 )
 
-[node name="Sprite45" type="Sprite" parent="Background2"]
+[node name="Sprite45" type="Sprite" parent="Background"]
 position = Vector2( 1152, 1408 )
 texture = ExtResource( 5 )
 
-[node name="Sprite46" type="Sprite" parent="Background2"]
+[node name="Sprite46" type="Sprite" parent="Background"]
 position = Vector2( 1408, 1408 )
 texture = ExtResource( 5 )
 
-[node name="Sprite47" type="Sprite" parent="Background2"]
+[node name="Sprite47" type="Sprite" parent="Background"]
 position = Vector2( 1664, 1408 )
 texture = ExtResource( 5 )
 
-[node name="Sprite48" type="Sprite" parent="Background2"]
+[node name="Sprite48" type="Sprite" parent="Background"]
 position = Vector2( 1920, 1408 )
 texture = ExtResource( 5 )
 
@@ -231,112 +231,187 @@ speed = 15
 wait_time = 0.5
 one_shot = true
 
-[node name="Enemies" type="Node" parent="."]
-
-[node name="Shooters" type="Node" parent="Enemies" groups=["Shooters"]]
-
-[node name="Shooter" parent="Enemies/Shooters" groups=["Shooters"] instance=ExtResource( 1 )]
-position = Vector2( 240, 64 )
-
-[node name="Shooter2" parent="Enemies/Shooters" groups=["Shooters"] instance=ExtResource( 1 )]
-position = Vector2( 320, 64 )
-
-[node name="Shooter3" parent="Enemies/Shooters" groups=["Shooters"] instance=ExtResource( 1 )]
-position = Vector2( 400, 64 )
-
-[node name="Shooter4" parent="Enemies/Shooters" groups=["Shooters"] instance=ExtResource( 1 )]
-position = Vector2( 480, 64 )
-
-[node name="Shooter5" parent="Enemies/Shooters" groups=["Shooters"] instance=ExtResource( 1 )]
-position = Vector2( 560, 64 )
-
-[node name="Shooter6" parent="Enemies/Shooters" groups=["Shooters"] instance=ExtResource( 1 )]
-position = Vector2( 640, 64 )
-
-[node name="Shooter7" parent="Enemies/Shooters" groups=["Shooters"] instance=ExtResource( 1 )]
-position = Vector2( 720, 64 )
-
-[node name="Shooter8" parent="Enemies/Shooters" groups=["Shooters"] instance=ExtResource( 1 )]
-position = Vector2( 800, 64 )
-
-[node name="Shooter9" parent="Enemies/Shooters" groups=["Shooters"] instance=ExtResource( 1 )]
-position = Vector2( 880, 64 )
-
-[node name="Shooter10" parent="Enemies/Shooters" groups=["Shooters"] instance=ExtResource( 1 )]
-position = Vector2( 960, 64 )
-
-[node name="Shooter11" parent="Enemies/Shooters" groups=["Shooters"] instance=ExtResource( 1 )]
-position = Vector2( 1040, 64 )
-
-[node name="Blockers 1" type="Node" parent="Enemies" groups=["Blockers1"]]
-
-[node name="Blocker 1" parent="Enemies/Blockers 1" groups=["Blockers1"] instance=ExtResource( 2 )]
-position = Vector2( 240, 136 )
-
-[node name="Blocker 2" parent="Enemies/Blockers 1" groups=["Blockers1"] instance=ExtResource( 2 )]
-position = Vector2( 320, 136 )
-
-[node name="Blocker 3" parent="Enemies/Blockers 1" groups=["Blockers1"] instance=ExtResource( 2 )]
-position = Vector2( 400, 136 )
-
-[node name="Blocker 4" parent="Enemies/Blockers 1" groups=["Blockers1"] instance=ExtResource( 2 )]
-position = Vector2( 480, 136 )
-
-[node name="Blocker 5" parent="Enemies/Blockers 1" groups=["Blockers1"] instance=ExtResource( 2 )]
-position = Vector2( 560, 136 )
-
-[node name="Blocker 6" parent="Enemies/Blockers 1" groups=["Blockers1"] instance=ExtResource( 2 )]
-position = Vector2( 640, 136 )
-
-[node name="Blocker 7" parent="Enemies/Blockers 1" groups=["Blockers1"] instance=ExtResource( 2 )]
-position = Vector2( 720, 136 )
-
-[node name="Blocker 8" parent="Enemies/Blockers 1" groups=["Blockers1"] instance=ExtResource( 2 )]
-position = Vector2( 800, 136 )
-
-[node name="Blocker 9" parent="Enemies/Blockers 1" groups=["Blockers1"] instance=ExtResource( 2 )]
-position = Vector2( 880, 136 )
-
-[node name="Blocker 10" parent="Enemies/Blockers 1" groups=["Blockers1"] instance=ExtResource( 2 )]
-position = Vector2( 960, 136 )
-
-[node name="Blocker 11" parent="Enemies/Blockers 1" groups=["Blockers1"] instance=ExtResource( 2 )]
-position = Vector2( 1040, 136 )
-
-[node name="Blockers 2" type="Node" parent="Enemies" groups=["Blockers2"]]
-
-[node name="Blocker 1" parent="Enemies/Blockers 2" groups=["Blockers2"] instance=ExtResource( 3 )]
-position = Vector2( 240, 216 )
-
-[node name="Blocker 2" parent="Enemies/Blockers 2" groups=["Blockers2"] instance=ExtResource( 3 )]
-position = Vector2( 320, 216 )
-
-[node name="Blocker 3" parent="Enemies/Blockers 2" groups=["Blockers2"] instance=ExtResource( 3 )]
-position = Vector2( 400, 216 )
-
-[node name="Blocker 4" parent="Enemies/Blockers 2" groups=["Blockers2"] instance=ExtResource( 3 )]
-position = Vector2( 480, 216 )
-
-[node name="Blocker 5" parent="Enemies/Blockers 2" groups=["Blockers2"] instance=ExtResource( 3 )]
-position = Vector2( 560, 216 )
-
-[node name="Blocker 6" parent="Enemies/Blockers 2" groups=["Blockers2"] instance=ExtResource( 3 )]
-position = Vector2( 640, 216 )
-
-[node name="Blocker 7" parent="Enemies/Blockers 2" groups=["Blockers2"] instance=ExtResource( 3 )]
-position = Vector2( 720, 216 )
-
-[node name="Blocker 8" parent="Enemies/Blockers 2" groups=["Blockers2"] instance=ExtResource( 3 )]
-position = Vector2( 800, 216 )
-
-[node name="Blocker 9" parent="Enemies/Blockers 2" groups=["Blockers2"] instance=ExtResource( 3 )]
-position = Vector2( 880, 216 )
-
-[node name="Blocker 10" parent="Enemies/Blockers 2" groups=["Blockers2"] instance=ExtResource( 3 )]
-position = Vector2( 960, 216 )
-
-[node name="Blocker 11" parent="Enemies/Blockers 2" groups=["Blockers2"] instance=ExtResource( 3 )]
-position = Vector2( 1040, 216 )
-
 [node name="PlayerStartPosition" type="Position2D" parent="."]
-position = Vector2( 640, 672 )
+position = Vector2( 640, 680 )
+
+[node name="WaveStartPosition" type="Position2D" parent="."]
+position = Vector2( 640, 384 )
+
+[node name="Wave" type="Node" parent="."]
+
+[node name="Shooters" type="Node" parent="Wave" groups=[
+"Shooters",
+]]
+
+[node name="Shooter" parent="Wave/Shooters" groups=[
+"Shooters",
+] instance=ExtResource( 1 )]
+position = Vector2( 240, 56 )
+
+[node name="Shooter2" parent="Wave/Shooters" groups=[
+"Shooters",
+] instance=ExtResource( 1 )]
+position = Vector2( 320, 56 )
+
+[node name="Shooter3" parent="Wave/Shooters" groups=[
+"Shooters",
+] instance=ExtResource( 1 )]
+position = Vector2( 400, 56 )
+
+[node name="Shooter4" parent="Wave/Shooters" groups=[
+"Shooters",
+] instance=ExtResource( 1 )]
+position = Vector2( 480, 56 )
+
+[node name="Shooter5" parent="Wave/Shooters" groups=[
+"Shooters",
+] instance=ExtResource( 1 )]
+position = Vector2( 560, 56 )
+
+[node name="Shooter6" parent="Wave/Shooters" groups=[
+"Shooters",
+] instance=ExtResource( 1 )]
+position = Vector2( 640, 56 )
+
+[node name="Shooter7" parent="Wave/Shooters" groups=[
+"Shooters",
+] instance=ExtResource( 1 )]
+position = Vector2( 720, 56 )
+
+[node name="Shooter8" parent="Wave/Shooters" groups=[
+"Shooters",
+] instance=ExtResource( 1 )]
+position = Vector2( 800, 56 )
+
+[node name="Shooter9" parent="Wave/Shooters" groups=[
+"Shooters",
+] instance=ExtResource( 1 )]
+position = Vector2( 880, 56 )
+
+[node name="Shooter10" parent="Wave/Shooters" groups=[
+"Shooters",
+] instance=ExtResource( 1 )]
+position = Vector2( 960, 56 )
+
+[node name="Shooter11" parent="Wave/Shooters" groups=[
+"Shooters",
+] instance=ExtResource( 1 )]
+position = Vector2( 1040, 56 )
+
+[node name="Blockers 1" type="Node" parent="Wave" groups=[
+"Blockers1",
+]]
+
+[node name="Blocker 1" parent="Wave/Blockers 1" groups=[
+"Blockers1",
+] instance=ExtResource( 2 )]
+position = Vector2( 240, 128 )
+
+[node name="Blocker 2" parent="Wave/Blockers 1" groups=[
+"Blockers1",
+] instance=ExtResource( 2 )]
+position = Vector2( 320, 128 )
+
+[node name="Blocker 3" parent="Wave/Blockers 1" groups=[
+"Blockers1",
+] instance=ExtResource( 2 )]
+position = Vector2( 400, 128 )
+
+[node name="Blocker 4" parent="Wave/Blockers 1" groups=[
+"Blockers1",
+] instance=ExtResource( 2 )]
+position = Vector2( 480, 128 )
+
+[node name="Blocker 5" parent="Wave/Blockers 1" groups=[
+"Blockers1",
+] instance=ExtResource( 2 )]
+position = Vector2( 560, 128 )
+
+[node name="Blocker 6" parent="Wave/Blockers 1" groups=[
+"Blockers1",
+] instance=ExtResource( 2 )]
+position = Vector2( 640, 128 )
+
+[node name="Blocker 7" parent="Wave/Blockers 1" groups=[
+"Blockers1",
+] instance=ExtResource( 2 )]
+position = Vector2( 720, 128 )
+
+[node name="Blocker 8" parent="Wave/Blockers 1" groups=[
+"Blockers1",
+] instance=ExtResource( 2 )]
+position = Vector2( 800, 128 )
+
+[node name="Blocker 9" parent="Wave/Blockers 1" groups=[
+"Blockers1",
+] instance=ExtResource( 2 )]
+position = Vector2( 880, 128 )
+
+[node name="Blocker 10" parent="Wave/Blockers 1" groups=[
+"Blockers1",
+] instance=ExtResource( 2 )]
+position = Vector2( 960, 128 )
+
+[node name="Blocker 11" parent="Wave/Blockers 1" groups=[
+"Blockers1",
+] instance=ExtResource( 2 )]
+position = Vector2( 1040, 128 )
+
+[node name="Blockers 2" type="Node" parent="Wave" groups=[
+"Blockers2",
+]]
+
+[node name="Blocker 1" parent="Wave/Blockers 2" groups=[
+"Blockers2",
+] instance=ExtResource( 3 )]
+position = Vector2( 240, 208 )
+
+[node name="Blocker 2" parent="Wave/Blockers 2" groups=[
+"Blockers2",
+] instance=ExtResource( 3 )]
+position = Vector2( 320, 208 )
+
+[node name="Blocker 3" parent="Wave/Blockers 2" groups=[
+"Blockers2",
+] instance=ExtResource( 3 )]
+position = Vector2( 400, 208 )
+
+[node name="Blocker 4" parent="Wave/Blockers 2" groups=[
+"Blockers2",
+] instance=ExtResource( 3 )]
+position = Vector2( 480, 208 )
+
+[node name="Blocker 5" parent="Wave/Blockers 2" groups=[
+"Blockers2",
+] instance=ExtResource( 3 )]
+position = Vector2( 560, 208 )
+
+[node name="Blocker 6" parent="Wave/Blockers 2" groups=[
+"Blockers2",
+] instance=ExtResource( 3 )]
+position = Vector2( 640, 208 )
+
+[node name="Blocker 7" parent="Wave/Blockers 2" groups=[
+"Blockers2",
+] instance=ExtResource( 3 )]
+position = Vector2( 720, 208 )
+
+[node name="Blocker 8" parent="Wave/Blockers 2" groups=[
+"Blockers2",
+] instance=ExtResource( 3 )]
+position = Vector2( 800, 208 )
+
+[node name="Blocker 9" parent="Wave/Blockers 2" groups=[
+"Blockers2",
+] instance=ExtResource( 3 )]
+position = Vector2( 880, 208 )
+
+[node name="Blocker 10" parent="Wave/Blockers 2" groups=[
+"Blockers2",
+] instance=ExtResource( 3 )]
+position = Vector2( 960, 208 )
+
+[node name="Blocker 11" parent="Wave/Blockers 2" groups=[
+"Blockers2",
+] instance=ExtResource( 3 )]
+position = Vector2( 1040, 208 )
