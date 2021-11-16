@@ -227,6 +227,10 @@ texture = ExtResource( 5 )
 [node name="Player" parent="." instance=ExtResource( 4 )]
 speed = 15
 
+[node name="CooldownTimer" type="Timer" parent="Player"]
+wait_time = 0.5
+one_shot = true
+
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Shooters" type="Node" parent="Enemies"]
