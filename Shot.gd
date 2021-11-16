@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var Move_Speed = 300
+var Move_Speed = 600
 var Life_time = 2
 var Life_spawn = 0
 
