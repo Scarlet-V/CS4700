@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 [gd_scene load_steps=11 format=2]
+=======
+<<<<<<< HEAD
+[gd_scene load_steps=11 format=2]
+=======
+[gd_scene load_steps=9 format=2]
+>>>>>>> c88c147772679a73e8994a32931e0a85f2f99ec5
+>>>>>>> 0824a1270ec21d2f0d774027c844f88efe9c8f83
 
 [ext_resource path="res://laserBlue01.png" type="Texture" id=1]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
@@ -12,6 +20,12 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 665, 24 )
+<<<<<<< HEAD
+=======
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 665, 24 )
+>>>>>>> 0824a1270ec21d2f0d774027c844f88efe9c8f83
 
 [node name="Main" type="Node"]
 script = ExtResource( 6 )
@@ -261,6 +275,10 @@ texture = ExtResource( 1 )
 position = Vector2( 655, 0 )
 shape = SubResource( 1 )
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0824a1270ec21d2f0d774027c844f88efe9c8f83
 [node name="Settings Icon" type="Button" parent="."]
 margin_left = 1229.0
 margin_top = 5.0
@@ -276,5 +294,10 @@ position = Vector2( 24, 20 )
 scale = Vector2( 0.120443, 0.107747 )
 texture = ExtResource( 8 )
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c88c147772679a73e8994a32931e0a85f2f99ec5
+>>>>>>> 0824a1270ec21d2f0d774027c844f88efe9c8f83
 [connection signal="cleared" from="Wave" to="." method="_on_Wave_cleared"]
 [connection signal="pressed" from="Settings Icon" to="Settings Icon" method="_on_Settings_Icon_pressed"]
