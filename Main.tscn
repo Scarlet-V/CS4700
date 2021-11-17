@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://laserBlue01.png" type="Texture" id=1]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://art/settings icon.png" type="Texture" id=8]
 [ext_resource path="res://Settings Icon.gd" type="Script" id=9]
 [ext_resource path="res://Score.gd" type="Script" id=10]
+[ext_resource path="res://Life.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 665, 24 )
@@ -295,6 +296,27 @@ margin_right = 40.0
 margin_bottom = 14.0
 rect_scale = Vector2( 2, 2 )
 text = "Score:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Life" type="Label" parent="GUI"]
+margin_left = 76.0
+margin_top = 34.0
+margin_right = 116.0
+margin_bottom = 48.0
+rect_scale = Vector2( 2, 2 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Life Label" type="Label" parent="GUI"]
+margin_top = 35.0
+margin_right = 40.0
+margin_bottom = 49.0
+rect_scale = Vector2( 2, 2 )
+text = "Lives:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
