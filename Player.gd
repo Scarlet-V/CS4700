@@ -1,5 +1,5 @@
 extends KinematicBody2D
-export var speed = 10
+export var speed = 20
 var velocity = Vector2()
 var screen_size
 onready var cooldownTimer := $CooldownTimer

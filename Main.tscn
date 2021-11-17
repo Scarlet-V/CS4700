@@ -223,7 +223,6 @@ position = Vector2( 1920, 1408 )
 texture = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-speed = 15
 
 [node name="CooldownTimer" type="Timer" parent="Player"]
 wait_time = 0.5
@@ -232,7 +231,9 @@ one_shot = true
 [node name="PlayerStartPosition" type="Position2D" parent="."]
 position = Vector2( 640, 680 )
 
-[node name="WaveStartPosition" type="Position2D" parent="."]
-position = Vector2( 640, 192 )
-
 [node name="Wave" parent="." instance=ExtResource( 7 )]
+
+[node name="WaveStartPosition" type="Position2D" parent="."]
+position = Vector2( 640, 136 )
+
+[connection signal="cleared" from="Wave" to="." method="_on_Wave_cleared"]

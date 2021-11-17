@@ -11,8 +11,6 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="WavePosition" type="Position2D" parent="."]
-
 [node name="Blocker 1" parent="." groups=[
 "Blockers2",
 "Enemies",

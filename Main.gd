@@ -1,6 +1,7 @@
 extends Node
 
 var score
+var wave = preload("res://Wave.tscn")
 
 
 # Declare member variables here. Examples:
@@ -26,3 +27,19 @@ func new_game():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Wave_cleared(node):
+	#Get rid of old empty wave
+	node.queue_free()
+	#Create a new wave node
+	var new_wave = wave.instance()
+	#Name it wave so that it can be referenced by $Wave maybe??
+	new_wave.set_name("Wave")
+	#Move it to the correct starting position after moving the starting position a little closer
+	$WaveStartPosition.position.y += 40
+	new_wave.position = $WaveStartPosition.position
+	#Connect the wave cleared signal of the new node to this function
+	new_wave.connect("cleared", self, "_on_Wave_cleared")
+	#Add the new wave node to the Main scene
+	add_child(new_wave)
