@@ -10,7 +10,6 @@ func _physics_process(delta):
 		collision.collider.kill()
 		queue_free()
 		
-		
 	Life_spawn =+ delta
 	if Life_spawn > Life_time:
 		queue_free()

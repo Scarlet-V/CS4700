@@ -21,11 +21,16 @@ func _physics_process(delta):
 		fire()
 
 func fire():
-	var bullet = preload("res://Bullet.tscn")
-	var firedbullet = bullet.instance()
-	firedbullet.position = Vector2(position.x, position.y)
-	get_parent().call_deferred("add_child", firedbullet)
-	cooldownTimer.start()
+	if Global.bulletAvailable == true:
+		var bullet = preload("res://Bullet.tscn")
+		var firedbullet = bullet.instance()
+		firedbullet.position = Vector2(position.x, position.y)
+		get_parent().call_deferred("add_child", firedbullet)
+		cooldownTimer.start()
+		Global.bulletAvailable = false
+
+func kill():
+	get_tree().change_scene("res://GameOver.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

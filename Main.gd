@@ -13,21 +13,22 @@ var wave = preload("res://Wave.tscn")
 func _ready():
 	randomize()
 	new_game()
+	if Global.playerHealth == 0:
+		game_over()
+	
 	
 func game_over():
-	pass
+	get_tree().change_scene("res://GameOver.tscn")
 	
 func new_game():
 	$Player.position = ($PlayerStartPosition.position)
 	$Wave.position = ($WaveStartPosition.position)
+	print(Global.playerHealth)
+	Global.playerHealth -= 1
 	
-
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
 
 func _on_Wave_cleared(node):
 	#Get rid of old empty wave

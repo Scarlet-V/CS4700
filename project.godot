@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Space Invaders"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -48,6 +48,7 @@ UserData="*res://addons/github-integration/scripts/user_data.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
+Global="*res://Global.gd"
 
 [display]
 
@@ -67,12 +68,12 @@ enabled=PoolStringArray( "res://addons/github-integration/plugin.cfg" )
 [layer_names]
 
 2d_render/layer_1="Enemies"
-2d_physics/layer_1="Enemies"
 2d_render/layer_2="Enemy Bullets"
-2d_physics/layer_2="Enemy Bullets"
 2d_render/layer_3="Player"
-2d_physics/layer_3="Player"
 2d_render/layer_4="Player Bullet"
+2d_physics/layer_1="Enemies"
+2d_physics/layer_2="Enemy Bullets"
+2d_physics/layer_3="Player"
 2d_physics/layer_4="Player Bullet"
 
 [physics]
