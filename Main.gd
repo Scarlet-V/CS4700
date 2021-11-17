@@ -20,6 +20,9 @@ func _ready():
 func game_over():
 	get_tree().change_scene("res://GameOver.tscn")
 	Global.playerHealth = Global.playerMaxHealth
+	Global.currentLevel = 1
+	Global.playerScore = 0
+	var bulletAvailable = true
 	
 func new_game():
 	$Player.position = ($PlayerStartPosition.position)

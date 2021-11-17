@@ -1,6 +1,5 @@
 extends Node2D
 
-
 var screenWidth = ProjectSettings.get_setting("display/window/size/width")
 var screenHeight = ProjectSettings.get_setting("display/window/size/height")
 
