@@ -28,7 +28,6 @@ func new_game():
 #func _process(delta):
 #	pass
 
-
 func _on_Wave_cleared(node):
 	#Get rid of old empty wave
 	node.queue_free()
