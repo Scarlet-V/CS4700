@@ -34,10 +34,6 @@ func _physics_process(delta):
 #func _process(delta):
 #	pass
 
-func kill():
-	Global.bulletAvailable = true
-	queue_free()
-
 func checkForBorderHit():
 	#Check if any children have hit the border
 	for child in get_children():

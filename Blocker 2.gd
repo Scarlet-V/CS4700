@@ -16,6 +16,7 @@ func _physics_process(delta):
 	
 func kill():
 	Global.bulletAvailable = true
+	Global.playerScore += 10
 	queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
