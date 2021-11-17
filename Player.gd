@@ -28,12 +28,9 @@ func fire():
 		get_parent().call_deferred("add_child", firedbullet)
 		cooldownTimer.start()
 		Global.bulletAvailable = false
-<<<<<<< HEAD
 
 func kill():
 	get_tree().change_scene("res://GameOver.tscn")
-=======
->>>>>>> 0824a1270ec21d2f0d774027c844f88efe9c8f83
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
