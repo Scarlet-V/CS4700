@@ -19,6 +19,7 @@ func _physics_process(delta):
 	#var collision = move_and_collide(Vector2.DOWN * delta * move_speed)
 	
 func kill():
+	Global.bulletAvailable = true
 	queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
