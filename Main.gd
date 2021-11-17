@@ -13,12 +13,13 @@ var wave = preload("res://Wave.tscn")
 func _ready():
 	randomize()
 	new_game()
-	if Global.playerHealth == 0:
+	if Global.playerHealth <= 0:
 		game_over()
 	
 	
 func game_over():
 	get_tree().change_scene("res://GameOver.tscn")
+	Global.playerHealth = Global.playerMaxHealth
 	
 func new_game():
 	$Player.position = ($PlayerStartPosition.position)
