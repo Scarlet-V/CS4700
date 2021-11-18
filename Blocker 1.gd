@@ -18,7 +18,6 @@ func kill():
 	Global.currentBullet += 1
 	Global.playerScore += 20
 	
-	var rng = randi()
 	if rng % 15 == 0:
 		var rapidfirepowerup = preload("res://RapidFirePowerUp.tscn")
 		var _rapidfirepowerup = rapidfirepowerup.instance()

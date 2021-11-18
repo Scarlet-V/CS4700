@@ -31,7 +31,6 @@ func kill():
 		get_parent().get_parent().call_deferred("add_child", _rapidfirepowerup)
 		
 	
-	var rng = randi()
 	print(rng % 10)
 	if rng % 5 == 0:
 		var extrabulletpowerup = preload("res://ExtraBulletPowerUp.tscn")

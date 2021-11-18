@@ -26,7 +26,6 @@ func kill():
 		_extrabulletpowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)
 		get_parent().get_parent().call_deferred("add_child", _extrabulletpowerup)
 	
-	var rng = randi()
 	if rng % 15 == 0 :
 		var rapidfirepowerup = preload("res://RapidFirePowerUp.tscn")
 		var _rapidfirepowerup = rapidfirepowerup.instance()
