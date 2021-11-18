@@ -24,12 +24,13 @@ func game_over():
 	Global.playerHealth = Global.playerMaxHealth
 	Global.currentLevel = 1
 	Global.playerScore = 0
+	Global.maxBullet = 1
+	Global.currentBullet = 1
 	var bulletAvailable = true
 	
 func new_game():
 	$Player.position = ($PlayerStartPosition.position)
 	$Wave.position = ($WaveStartPosition.position)
-	print(Global.playerHealth)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

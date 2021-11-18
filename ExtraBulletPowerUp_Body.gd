@@ -7,5 +7,5 @@ func _physics_process(delta):
 
 func _on_ExtraBulletPowerUp_Body_body_entered(body):
 	if body.name == "Player":
-		Global.maxbullet += 1
+		Global.currentBullet += 1
 		queue_free()

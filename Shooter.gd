@@ -21,7 +21,7 @@ func _physics_process(delta):
 	#var collision = move_and_collide(Vector2.DOWN * delta * move_speed)
 	
 func kill():
-	Global.bulletAvailable = true
+	Global.currentBullet += 1
 	Global.playerScore += 40
 	queue_free()
 

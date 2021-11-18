@@ -15,7 +15,7 @@ func _physics_process(delta):
 	pass
 	
 func kill():
-	Global.bulletAvailable = true
+	Global.currentBullet += 1
 	Global.playerScore += 20
 	queue_free()
 
