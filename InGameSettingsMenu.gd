@@ -11,6 +11,7 @@ extends Control
 
 func _on_Resume_pressed():
 	get_tree().change_scene("res://Main.tscn")
+	var bulletAvailable = true
 
 
 func _on_Main_Menu_pressed():
@@ -23,3 +24,7 @@ func _on_Main_Menu_pressed():
 
 func _on_Audio_pressed():
 	get_tree().change_scene("res://Audio.tscn")
+	Global.playerHealth = Global.playerMaxHealth
+	Global.currentLevel = 1
+	Global.playerScore = 0
+	var bulletAvailable = true

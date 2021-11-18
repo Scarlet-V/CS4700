@@ -19,7 +19,7 @@ func _ready():
 
 
 func _on_Back_pressed():
-	get_tree().change_scene("res://Menu.tscn")
+	get_tree().change_scene("res://InGameSettingsMenu.tscn")
 
 
 func _on_Master_Slider_value_changed(value):
