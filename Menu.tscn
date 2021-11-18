@@ -451,5 +451,5 @@ texture = ExtResource( 3 )
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Variant" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Variant" to="." method="_on_Variant_pressed"]
-[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_Start_pressed"]
