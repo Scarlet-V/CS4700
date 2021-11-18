@@ -42,7 +42,7 @@ func _on_Wave_cleared(node):
 	#Name it wave so that it can be referenced by $Wave maybe??
 	new_wave.set_name("Wave")
 	#Move it to the correct starting position after moving the starting position a little closer
-	$WaveStartPosition.position.y += 40
+	$WaveStartPosition.position.y += 30
 	new_wave.position = $WaveStartPosition.position
 	#Connect the wave cleared signal of the new node to this function
 	new_wave.connect("cleared", self, "_on_Wave_cleared")

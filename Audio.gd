@@ -16,13 +16,5 @@ func _ready():
 #	pass
 
 
-func _on_Start_pressed():
-	get_tree().change_scene("res://Main.tscn")
-
-
-func _on_Variant_pressed():
-	get_tree().change_scene("res://Variant.tscn")
-
-
-func _on_Settings_pressed():
-	get_tree().change_scene("res://MenuSettings.tscn")
+func _on_Back_pressed():
+	get_tree().change_scene("res://Menu.tscn")

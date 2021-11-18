@@ -13,10 +13,10 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 467.0
-margin_top = 528.0
-margin_right = 588.0
-margin_bottom = 781.0
+margin_left = 456.0
+margin_top = 392.0
+margin_right = 577.0
+margin_bottom = 645.0
 rect_scale = Vector2( 3, 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -26,6 +26,20 @@ __meta__ = {
 margin_right = 121.0
 margin_bottom = 20.0
 text = "Start"
+
+[node name="Variant" type="Button" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 121.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( -168, -134.333 )
+text = "Variant"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+margin_top = 48.0
+margin_right = 121.0
+margin_bottom = 68.0
+rect_pivot_offset = Vector2( -168, -134.333 )
+text = "Settings"
 
 [node name="Background" type="Node" parent="."]
 
@@ -435,3 +449,7 @@ scale = Vector2( 1.11012, 1.59877 )
 texture = ExtResource( 3 )
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Variant" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Variant" to="." method="_on_Variant_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_Settings_pressed"]
