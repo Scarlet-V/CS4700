@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://laserBlue01.png" type="Texture" id=1]
 [ext_resource path="res://art/Backgrounds/blue.png" type="Texture" id=2]
@@ -12,11 +12,14 @@
 [ext_resource path="res://Settings Icon.gd" type="Script" id=10]
 [ext_resource path="res://Score.gd" type="Script" id=11]
 [ext_resource path="res://Level.gd" type="Script" id=12]
+[ext_resource path="res://GameMusic.mp3" type="AudioStream" id=13]
+[ext_resource path="res://Variant.gd" type="Script" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 665, 24 )
 
 [node name="Variant" type="Node"]
+script = ExtResource( 14 )
 
 [node name="Background" type="Node2D" parent="."]
 __meta__ = {
@@ -344,4 +347,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+bus = "Music"
+
+[connection signal="cleared" from="Wave" to="Wave" method="_on_Wave_cleared"]
 [connection signal="pressed" from="Settings Icon" to="Settings Icon" method="_on_Settings_Icon_pressed"]
