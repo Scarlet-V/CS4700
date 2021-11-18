@@ -21,7 +21,7 @@ func _physics_process(delta):
 	#var collision = move_and_collide(Vector2.DOWN * delta * move_speed)
 	
 func kill():
-	Global.bulletAvailable = true
+	Global.currentBullet += 1
 	Global.playerScore += 40
 	var rng = randi()
 	if rng % 15 == 0:
@@ -30,6 +30,15 @@ func kill():
 		_rapidfirepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)
 		get_parent().get_parent().call_deferred("add_child", _rapidfirepowerup)
 		
+	
+	var rng = randi()
+	print(rng % 10)
+	if rng % 5 == 0:
+		var extrabulletpowerup = preload("res://ExtraBulletPowerUp.tscn")
+		var _extrabulletpowerup = extrabulletpowerup.instance()
+		_extrabulletpowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)
+		get_parent().get_parent().call_deferred("add_child", _extrabulletpowerup)
+	
 	queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

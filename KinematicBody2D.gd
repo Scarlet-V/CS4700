@@ -1,4 +1,4 @@
 extends KinematicBody2D
 
 func kill():
-	Global.bulletAvailable = true
+	Global.currentBullet += 1

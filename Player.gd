@@ -17,19 +17,19 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta * speed)
 	position.x = clamp(position.x, 0, screen_size.x)
 	
-	if Input.is_action_just_pressed("ui_accept") and cooldownTimer.is_stopped():
+	if Input.is_action_just_pressed("ui_accept"):
 		fire()
 
 func fire():
-	if Global.bulletAvailable == true:
+	if Global.currentBullet > 0:
 		var bullet = preload("res://Bullet.tscn")
 		var firedbullet = bullet.instance()
 		firedbullet.position = Vector2(position.x, position.y)
 		get_parent().call_deferred("add_child", firedbullet)
 		cooldownTimer.start()
-		Global.bulletAvailable = false
 		#This is what plays a noise when a bullet is fired
 		#$PlayerBulletSound.play()
+		Global.currentBullet -= 1
 
 func kill():
 	get_tree().change_scene("res://GameOver.tscn")

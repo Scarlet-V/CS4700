@@ -15,13 +15,16 @@ func _physics_process(delta):
 	pass
 	
 func kill():
-	Global.bulletAvailable = true
+	Global.currentBullet += 1
 	Global.playerScore += 10
 	
-	var extrabulletpowerup = preload("res://ExtraBulletPowerUp.tscn")
-	var _extrabulletpowerup = extrabulletpowerup.instance()
-	_extrabulletpowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)
-	get_parent().get_parent().call_deferred("add_child", _extrabulletpowerup)
+	var rng = randi()
+	print(rng % 10)
+	if rng % 5 == 0:
+		var extrabulletpowerup = preload("res://ExtraBulletPowerUp.tscn")
+		var _extrabulletpowerup = extrabulletpowerup.instance()
+		_extrabulletpowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)
+		get_parent().get_parent().call_deferred("add_child", _extrabulletpowerup)
 	
 	var rng = randi()
 	if rng % 15 == 0 :
