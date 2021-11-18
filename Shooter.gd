@@ -16,6 +16,8 @@ func _physics_process(delta):
 		get_parent().get_parent().call_deferred("add_child", fired_bullet)
 		shoot_delay = randi()%(max_delay-min_delay) + min_delay
 		shooting_count = 0
+		#This is what makes the noise when a bullet is fired
+		#$EnemyBulletMusic.play()
 	#var collision = move_and_collide(Vector2.DOWN * delta * move_speed)
 	
 func kill():

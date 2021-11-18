@@ -28,6 +28,8 @@ func fire():
 		get_parent().call_deferred("add_child", firedbullet)
 		cooldownTimer.start()
 		Global.bulletAvailable = false
+		#This is what plays a noise when a bullet is fired
+		#$PlayerBulletSound.play()
 
 func kill():
 	get_tree().change_scene("res://GameOver.tscn")

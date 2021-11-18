@@ -49,3 +49,7 @@ func _on_Wave_cleared(node):
 	new_wave.connect("cleared", self, "_on_Wave_cleared")
 	#Add the new wave node to the Main scene
 	add_child(new_wave)
+
+func _on_Master_Slider_value_changed(value):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"),value)
+	pass 

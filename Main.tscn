@@ -349,6 +349,7 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
+bus = "Music"
 
 [connection signal="cleared" from="Wave" to="." method="_on_Wave_cleared"]
 [connection signal="pressed" from="Settings Icon" to="Settings Icon" method="_on_Settings_Icon_pressed"]

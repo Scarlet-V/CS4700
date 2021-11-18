@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Audio.gd" type="Script" id=1]
 [ext_resource path="res://art/Backgrounds/blue.png" type="Texture" id=2]
+[ext_resource path="res://MenuMusic.mp3" type="AudioStream" id=3]
 
 [node name="Audio" type="Control"]
 anchor_right = 1.0
@@ -27,6 +28,8 @@ __meta__ = {
 margin_top = 15.0
 margin_right = 200.0
 margin_bottom = 31.0
+min_value = -50.0
+max_value = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -52,6 +55,8 @@ __meta__ = {
 margin_top = 15.0
 margin_right = 200.0
 margin_bottom = 31.0
+min_value = -50.0
+max_value = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -315,4 +320,8 @@ texture = ExtResource( 2 )
 position = Vector2( 1920, 1408 )
 texture = ExtResource( 2 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="value_changed" from="Master/Master Slider" to="." method="_on_Master_Slider_value_changed"]
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
