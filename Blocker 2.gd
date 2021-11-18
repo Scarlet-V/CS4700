@@ -19,7 +19,7 @@ func kill():
 	Global.playerScore += 10
 	
 	var rng = randi()
-	print(rng % 4)
+	print(rng % 10)
 	if rng % 5 == 0:
 		var extrabulletpowerup = preload("res://ExtraBulletPowerUp.tscn")
 		var _extrabulletpowerup = extrabulletpowerup.instance()
