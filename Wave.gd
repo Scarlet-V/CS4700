@@ -54,4 +54,4 @@ func reverseDirection():
 	position.y += vertical_distance
 	
 func waveCleared():
-	return get_child_count() == 30
+	return get_child_count() == 0

@@ -11,11 +11,14 @@ extends Control
 
 func _on_Resume_pressed():
 	get_tree().change_scene("res://Main.tscn")
-	Global.playerHealth += 1
 
 
 func _on_Main_Menu_pressed():
 	get_tree().change_scene("res://Menu.tscn")
+	Global.playerHealth = Global.playerMaxHealth
+	Global.currentLevel = 1
+	Global.playerScore = 0
+	var bulletAvailable = true
 
 
 func _on_Audio_pressed():
