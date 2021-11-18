@@ -21,3 +21,4 @@ polygon = PoolVector2Array( -8.82565, -38.2712, 8.86098, -38.6049, 13.0323, -12.
 
 [node name="PlayerBulletSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+bus = "SFX"
