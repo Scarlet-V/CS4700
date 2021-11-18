@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://art/Game Over.png" type="Texture" id=1]
 [ext_resource path="res://art/Space Background.jpg" type="Texture" id=2]
 [ext_resource path="res://GameOver.gd" type="Script" id=3]
+[ext_resource path="res://MenuMusic.mp3" type="AudioStream" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -33,5 +34,8 @@ text = "Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

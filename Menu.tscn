@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://art/Backgrounds/blue.png" type="Texture" id=2]
 [ext_resource path="res://art/Space Invaders Title.png" type="Texture" id=3]
+[ext_resource path="res://MenuMusic.mp3" type="AudioStream" id=4]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -448,8 +449,11 @@ position = Vector2( 649, 166 )
 scale = Vector2( 1.11012, 1.59877 )
 texture = ExtResource( 3 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Variant" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Variant" to="." method="_on_Variant_pressed"]
+[connection signal="pressed" from="VBoxContainer/Variant" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_Start_pressed"]

@@ -13,6 +13,8 @@ var wave = preload("res://Wave.tscn")
 func _ready():
 	randomize()
 	new_game()
+	if $AudioStreamPlayer.playing == false:
+		$AudioStreamPlayer.play()
 	if Global.playerHealth <= 0:
 		game_over()
 	
