@@ -17,3 +17,4 @@ func _ready():
 
 func _on_Settings_Icon_pressed():
 	get_tree().change_scene("res://InGameSettingsMenu.tscn")
+	#get_tree().paused = true
