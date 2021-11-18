@@ -1,6 +1,5 @@
 extends Node2D
 
-
 var screenWidth = ProjectSettings.get_setting("display/window/size/width")
 var screenHeight = ProjectSettings.get_setting("display/window/size/height")
 
@@ -28,12 +27,12 @@ func _physics_process(delta):
 		checkForBottomReached()
 		#If all the enemies are killed tell Main in _on_Wave_cleared
 		if waveCleared():
+			Global.currentLevel += 1
 			emit_signal("cleared", self)
 			
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
 
 func checkForBorderHit():
 	#Check if any children have hit the border
