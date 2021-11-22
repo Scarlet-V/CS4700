@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://laserBlue01.png" type="Texture" id=1]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Level.gd" type="Script" id=12]
 [ext_resource path="res://Level Label.gd" type="Script" id=13]
 [ext_resource path="res://GameMusic.mp3" type="AudioStream" id=14]
+[ext_resource path="res://Bullet.gd" type="Script" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 665, 24 )
@@ -242,7 +243,7 @@ wait_time = 0.5
 one_shot = true
 
 [node name="PlayerStartPosition" type="Position2D" parent="."]
-position = Vector2( 640, 680 )
+position = Vector2( 634, 634 )
 
 [node name="Wave" parent="." instance=ExtResource( 7 )]
 
@@ -343,6 +344,27 @@ margin_bottom = 27.0
 rect_scale = Vector2( 3, 3 )
 text = "Level:"
 script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bullet Label" type="Label" parent="GUI"]
+margin_top = 69.0
+margin_right = 42.0
+margin_bottom = 83.0
+rect_scale = Vector2( 2, 2 )
+text = "Bullets Available:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bullet" type="Label" parent="GUI"]
+margin_left = 232.0
+margin_top = 69.0
+margin_right = 272.0
+margin_bottom = 83.0
+rect_scale = Vector2( 2, 2 )
+script = ExtResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
