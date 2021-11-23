@@ -29,6 +29,11 @@ func fire():
 		#This is what plays a noise when a bullet is fired
 		#$PlayerBulletSound.play()
 		Global.currentBullet -= 1
+	else:
+		# Reload timer
+		yield(get_tree().create_timer(1.5),"timeout")
+		print("Reloading")
+		Global.currentBullet = Global.maxBullet
 
 func kill():
 	get_tree().change_scene("res://GameOver.tscn")

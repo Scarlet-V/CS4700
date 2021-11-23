@@ -21,7 +21,6 @@ func _physics_process(delta):
 	#var collision = move_and_collide(Vector2.DOWN * delta * move_speed)
 	
 func kill():
-	Global.currentBullet += 1
 	Global.playerScore += 40
 	print(get_tree().get_current_scene().get_name() == "Variant")
 	if get_tree().get_current_scene().get_name() == "Variant":

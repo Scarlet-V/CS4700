@@ -1,4 +1,7 @@
 extends Label
 
 func _process(delta):
-	self.text = str(Global.currentBullet)
+	if Global.rapidfirepu == true:
+		self.text = "MAX BULLETS"
+	else:
+		self.text = str(Global.currentBullet)

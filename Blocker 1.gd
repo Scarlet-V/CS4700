@@ -15,7 +15,6 @@ func _physics_process(delta):
 	pass
 	
 func kill():
-	Global.currentBullet += 1
 	Global.playerScore += 20
 	if get_tree().get_current_scene().get_name() == "Variant":
 		var rng = randi()
@@ -26,7 +25,6 @@ func kill():
 			_extrabulletpowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)
 			get_parent().get_parent().call_deferred("add_child", _extrabulletpowerup)
 		if rng % 17 == 0 :
-			Global.rapidfirepu = true
 			var rapidfirepowerup = preload("res://RapidFirePowerUp.tscn")
 			var _rapidfirepowerup = rapidfirepowerup.instance()
 			_rapidfirepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
