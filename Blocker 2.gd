@@ -25,11 +25,17 @@ func kill():
 		_extrabulletpowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)
 		get_parent().get_parent().call_deferred("add_child", _extrabulletpowerup)
 	
-	if rng % 1 == 0 :
+	if rng % 17 == 0 :
 		var rapidfirepowerup = preload("res://RapidFirePowerUp.tscn")
 		var _rapidfirepowerup = rapidfirepowerup.instance()
 		_rapidfirepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)
 		get_parent().get_parent().call_deferred("add_child", _rapidfirepowerup)
+		
+	if rng % 15 == 0 :
+			var clonepowerup = preload("res://ClonePowerUp.tscn")
+			var _clonepowerup = clonepowerup.instance()
+			_clonepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
+			get_parent().get_parent().call_deferred("add_child", _clonepowerup)
 		
 	queue_free()
 
