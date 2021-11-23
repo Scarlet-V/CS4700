@@ -26,7 +26,6 @@ func fire():
 		var firedbullet = bullet.instance()
 		firedbullet.position = Vector2(position.x, position.y)
 		get_parent().call_deferred("add_child", firedbullet)
-		cooldownTimer.start()
 		#This is what plays a noise when a bullet is fired
 		#$PlayerBulletSound.play()
 		Global.currentBullet -= 1

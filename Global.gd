@@ -7,3 +7,5 @@ var playerMaxHealth = 1
 var playerScore = 0
 var currentLevel = 1
 var rapidfirepu = false
+
+var powerUptimer = 1

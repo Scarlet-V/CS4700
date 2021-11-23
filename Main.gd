@@ -24,7 +24,6 @@ func game_over():
 	Global.playerHealth = Global.playerMaxHealth
 	Global.currentLevel = 1
 	Global.playerScore = 0
-	Global.maxBullet = 1
 	Global.currentBullet = 1
 	var bulletAvailable = true
 	
