@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://art/ships/playerShip1_red.png" type="Texture" id=2]
+[ext_resource path="res://PlayerBulletSound.ogg" type="AudioStream" id=3]
+
+[node name="Player" type="KinematicBody2D"]
+scale = Vector2( 0.8, 0.8 )
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -8.82565, -38.2712, 8.86098, -38.6049, 13.0323, -12.4087, 35.2241, 0.606037, 39.3954, -0.561947, 43.0662, -7.23615, 51.409, -7.403, 45.7359, 25.1337, 14.3672, 27.8034, 8.0267, 38.4821, -8.32509, 37.9816, -13.6645, 27.3028, -46.5349, 24.9669, -49.7051, -7.06929, -42.8641, -7.06929, -40.695, -1.56308, -36.1899, 0.772892, -11.9959, -12.4087 )
+
+[node name="PlayerBulletSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "SFX"
