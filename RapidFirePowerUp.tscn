@@ -22,4 +22,9 @@ texture = ExtResource( 2 )
 position = Vector2( 0, 1 )
 shape = SubResource( 1 )
 
+[node name="Timer" type="Timer" parent="RapidFirePU"]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="body_entered" from="RapidFirePU" to="RapidFirePU" method="_on_RapidFirePU_body_entered"]
+[connection signal="timeout" from="RapidFirePU/Timer" to="RapidFirePU" method="_on_Timer_timeout"]
