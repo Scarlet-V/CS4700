@@ -17,16 +17,9 @@ func _physics_process(delta):
 #		start()
 		
 func _on_RapidFirePU_body_entered(body):
-	var currentBullet_old = Global.currentBullet
-	var maxBullet_old = Global.maxBullet
 	if body.name == "Player":
 		Global.rapidfirepu = true
-		if Global.rapidfirepu == true:
-			Global.currentBullet = 1000
-			
 		yield(get_tree().create_timer(10),"timeout")
-		Global.currentBullet=currentBullet_old
-		Global.maxBullet=maxBullet_old
 		Global.rapidfirepu=false
 #   This code should work in theory but it does not reset after rapidfirepu is 
 #   false even if i force reset the currentbullet and max bullet

@@ -25,7 +25,6 @@ func kill():
 	print(get_tree().get_current_scene().get_name() == "Variant")
 	if get_tree().get_current_scene().get_name() == "Variant":
 		var rng = randi()
-		print(rng % 10)
 		if rng % 5 == 0:
 			var extrabulletpowerup = preload("res://ExtraBulletPowerUp.tscn")
 			var _extrabulletpowerup = extrabulletpowerup.instance()

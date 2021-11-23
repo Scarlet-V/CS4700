@@ -18,13 +18,12 @@ func kill():
 	Global.playerScore += 20
 	if get_tree().get_current_scene().get_name() == "Variant":
 		var rng = randi()
-		print(rng % 10)
 		if rng % 5 == 0:
 			var extrabulletpowerup = preload("res://ExtraBulletPowerUp.tscn")
 			var _extrabulletpowerup = extrabulletpowerup.instance()
 			_extrabulletpowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)
 			get_parent().get_parent().call_deferred("add_child", _extrabulletpowerup)
-		if rng % 17 == 0 :
+		if rng % 17 == 0 && Global.rapidfirepu == false:
 			var rapidfirepowerup = preload("res://RapidFirePowerUp.tscn")
 			var _rapidfirepowerup = rapidfirepowerup.instance()
 			_rapidfirepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
