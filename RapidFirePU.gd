@@ -15,6 +15,20 @@ func _on_RapidFirePU_body_entered(body):
 	# could not get it to work properly
 	if body.name == "Player":
 		start()
+#func _on_RapidFirePU_body_entered(body):
+#	if Global.rapidfirepu == true:
+#		c=10
+#		while c>1:
+#			if body.name == "Player":
+#				Global.currentBullet = 10
+#				for i in 10:
+#					c -=1
+#					yield(get_tree().create_timer(1),"timeout")
+#		Global.currentBullet=1
+#		Global.maxBullet=1
+#		Global.rapidfirepu=false
+#   This code should work in theory but it does not reset after rapidfirepu is 
+#   false even if i force reset the currentbullet and max bullet
 
 func start():
 	var bullet = preload("res://Bullet.tscn")
