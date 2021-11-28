@@ -19,9 +19,26 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		fire()
+	# reload
+	if Global.currentBullet == 0:
+		yield(get_tree().create_timer(3),"timeout")
+		Global.currentBullet = Global.maxBullet
+		
+	print(Global.currentBullet)
 
 func fire():
-	if Global.currentBullet > 0:
+	if Global.rapidfirepu == true:
+		var bullet = preload("res://Bullet.tscn")
+		var firedbullet = bullet.instance()
+		firedbullet.position = Vector2(position.x, position.y)
+		get_parent().call_deferred("add_child", firedbullet)
+		Global.currentBullet = 1000
+		yield(get_tree().create_timer(10),"timeout")
+		Global.currentBullet = Global.maxBullet
+		Global.rapidfirepu=false
+		
+	
+	elif Global.currentBullet > 0:
 		var bullet = preload("res://Bullet.tscn")
 		var firedbullet = bullet.instance()
 		firedbullet.position = Vector2(position.x, position.y)
@@ -29,11 +46,6 @@ func fire():
 		#This is what plays a noise when a bullet is fired
 		#$PlayerBulletSound.play()
 		Global.currentBullet -= 1
-	else:
-		# Reload timer
-		yield(get_tree().create_timer(1.5),"timeout")
-		print("Reloading")
-		Global.currentBullet = Global.maxBullet
 
 func kill():
 	get_tree().change_scene("res://GameOver.tscn")
