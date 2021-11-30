@@ -3,6 +3,9 @@ export var speed = 20
 var velocity = Vector2()
 var screen_size
 onready var cooldownTimer := $CooldownTimer
+#onready var raycast2d := $RayCast2D
+#onready var vfx_line := $vfx_line
+onready var raycast = $LaserPowerUp
 
 
 func _ready():
@@ -20,6 +23,13 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") && Global.bulletAvailable == true:
 		fire()
 
+	if Input.is_action_pressed("ui_b"):
+		laser()
+		
+	if Input.is_action_just_released("ui_b"):
+		$LaserPowerUp.enabled = false
+		$LaserPowerUp.visible = false
+
 func fire():
 	if (Global.rapidfirepu == true):
 			var bullet = preload("res://Bullet.tscn")
@@ -36,14 +46,16 @@ func fire():
 		#$PlayerBulletSound.play()
 		Global.currentBullet -= 1
 		
-		
 	if Global.currentBullet == 0:
 		Global.bulletAvailable = false
 		reload()
 		
-	#elif Global.currentBullet <= 0:
-	#	Global.bulletAvailable = false
-	#	reload()
+func laser():
+	$LaserPowerUp.enabled = true
+	$LaserPowerUp.visible = true
+	if raycast.is_colliding():
+		var collide = raycast.get_collider()
+		#print(raycast.get_collider().has_method())
 
 func reload():
 	print("RELOADING")
