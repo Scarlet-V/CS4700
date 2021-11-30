@@ -18,9 +18,7 @@ func _physics_process(delta):
 	position.x = clamp(position.x, 0, screen_size.x)
 	
 	if Input.is_action_just_pressed("ui_accept") && Global.bulletAvailable == true:
-			fire()
-		
-	#print(Global.currentBullet)
+		fire()
 
 func fire():
 	if (Global.rapidfirepu == true):
