@@ -7,6 +7,8 @@ var playerMaxHealth = 1
 var playerScore = 0
 var currentLevel = 1
 
+var enemyMS = 100
+
 var bulletAvailable = true
 var rapidfirepu = false
 var clone = false

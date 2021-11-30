@@ -3,9 +3,9 @@ extends Node2D
 var screenWidth = ProjectSettings.get_setting("display/window/size/width")
 var screenHeight = ProjectSettings.get_setting("display/window/size/height")
 
-export var move_speed = 100
+#export var move_speed = 100
 export var vertical_distance = 20
-var direction = Vector2(move_speed, 0)
+var direction = Vector2(Global.enemyMS, 0)
 var move = true
 export var shipWidth = 35
 export var shipHeight = 100
