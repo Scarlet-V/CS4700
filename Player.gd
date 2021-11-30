@@ -36,9 +36,14 @@ func fire():
 		#$PlayerBulletSound.play()
 		Global.currentBullet -= 1
 		
-	elif Global.currentBullet <= 0:
+		
+	if Global.currentBullet == 0:
 		Global.bulletAvailable = false
 		reload()
+		
+	#elif Global.currentBullet <= 0:
+	#	Global.bulletAvailable = false
+	#	reload()
 
 func reload():
 	print("RELOADING")
