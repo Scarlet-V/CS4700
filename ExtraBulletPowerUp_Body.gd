@@ -10,3 +10,4 @@ func _on_ExtraBulletPowerUp_Body_body_entered(body):
 		Global.currentBullet += 1
 		Global.maxBullet += 1
 		queue_free()
+		print("Extra Bullet Power Up")

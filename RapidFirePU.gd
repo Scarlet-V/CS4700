@@ -18,15 +18,16 @@ func _physics_process(delta):
 		
 func _on_RapidFirePU_body_entered(body):
 	if body.name == "Player":
-		Global.rapidfirepu = true
-		yield(get_tree().create_timer(10),"timeout")
-		Global.rapidfirepu=false
+		start()
 #   This code should work in theory but it does not reset after rapidfirepu is 
 #   false even if i force reset the currentbullet and max bullet
 
 func start():
-	var bullet = preload("res://Bullet.tscn")
-	var firedbullet = bullet.instance()
-	firedbullet.position = Vector2(position.x, position.y)
-	get_parent().call_deferred("add_child", firedbullet)
-	queue_free()
+	print("rapid fire on")
+	Global.rapidfirepu = true
+	while Global.rapidfirepu == true:
+		Global.currentBullet = 1000
+		yield(get_tree().create_timer(5),"timeout")
+		print("rapid fire on")
+		Global.rapidfirepu = false
+	Global.currentBullet = Global.maxBullet
