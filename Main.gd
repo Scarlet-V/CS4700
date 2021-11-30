@@ -26,6 +26,7 @@ func game_over():
 	Global.playerScore = 0
 	Global.currentBullet = 1
 	var bulletAvailable = true
+	Global.enemyMS = 100
 	
 func new_game():
 	$Player.position = ($PlayerStartPosition.position)

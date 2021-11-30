@@ -23,12 +23,12 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") && Global.bulletAvailable == true:
 		fire()
 
-	if Input.is_action_pressed("ui_b"):
+	if Input.is_action_pressed("ui_b") && Global.laserPowerUp == true:
 		laser()
 		
-	if Input.is_action_just_released("ui_b"):
-		$LaserPowerUp.enabled = false
-		$LaserPowerUp.visible = false
+	#if Input.is_action_just_released("ui_b"):
+	#	$LaserPowerUp.enabled = false
+	#	$LaserPowerUp.visible = false
 
 func fire():
 	if (Global.rapidfirepu == true):
@@ -51,10 +51,28 @@ func fire():
 		reload()
 		
 func laser():
-	$LaserPowerUp.enabled = true
-	$LaserPowerUp.visible = true
-	if raycast.is_colliding():
-		var collide = raycast.get_collider()
+	var laser = preload("res://LaserPowerUp.tscn")
+	var firedlaser = laser.instance()
+
+	firedlaser.position = Vector2(position.x, position.y)
+	get_parent().call_deferred("add_child", firedlaser)
+	Global.laserPowerUp = false
+	#print("TEST1")
+	#yield(get_tree().create_timer(2),"timeout")
+	#print("TEST@2")
+	Global.laserPowerUp = true
+	if firedlaser != null && is_instance_valid(firedlaser):
+		print(is_instance_valid(firedlaser))
+		yield(get_tree().create_timer(2),"timeout")
+		firedlaser.queue_free()
+	#Global.laserPowerUp = false
+	#yield(get_tree().create_timer(2),"timeout")
+	#firedlaser.queue_free()
+	#Global.laserPowerUp = true
+	#$LaserPowerUp.enabled = true
+	#$LaserPowerUp.visible = true
+	#if raycast.is_colliding():
+	#	var collide = raycast.get_collider()
 		#print(raycast.get_collider().has_method())
 
 func reload():

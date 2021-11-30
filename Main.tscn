@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://laserBlue01.png" type="Texture" id=1]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
@@ -16,7 +16,6 @@
 [ext_resource path="res://GameMusic.mp3" type="AudioStream" id=14]
 [ext_resource path="res://Bullet.gd" type="Script" id=15]
 [ext_resource path="res://Reloading Label.gd" type="Script" id=16]
-[ext_resource path="res://LaserPowerUp.tscn" type="PackedScene" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 665, 24 )
@@ -244,10 +243,6 @@ position = Vector2( 721, 631 )
 [node name="CooldownTimer" type="Timer" parent="Player"]
 wait_time = 0.5
 one_shot = true
-
-[node name="LaserPowerUp" parent="Player" instance=ExtResource( 18 )]
-visible = false
-position = Vector2( 0, 20 )
 
 [node name="PlayerStartPosition" type="Position2D" parent="."]
 position = Vector2( 634, 634 )
