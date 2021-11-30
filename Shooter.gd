@@ -35,8 +35,11 @@ func kill():
 			var _clonepowerup = clonepowerup.instance()
 			_clonepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
 			get_parent().get_parent().call_deferred("add_child", _clonepowerup)
-		
-	queue_free()
+	Global.shooterHP -= 1
+	
+	if Global.shooterHP == 0:
+		Global.shooterHP = Global.shootermaxHP
+		queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

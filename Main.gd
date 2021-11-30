@@ -49,6 +49,13 @@ func _on_Wave_cleared(node):
 	new_wave.connect("cleared", self, "_on_Wave_cleared")
 	#Add the new wave node to the Main scene
 	Global.enemyMS += 100
+	Global.shooterHP = Global.shootermaxHP
+	Global.blocker1HP = Global.blocker1maxHP
+	Global.blocker2HP = Global.blocker2maxHP
+	
+	Global.shootermaxHP += 1
+	Global.blocker1maxHP += 1
+	Global.blocker2maxHP += 1
 	add_child(new_wave)
 
 func _on_Master_Slider_value_changed(value):

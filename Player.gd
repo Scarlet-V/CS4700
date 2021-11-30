@@ -18,16 +18,16 @@ func _physics_process(delta):
 	position.x = clamp(position.x, 0, screen_size.x)
 	
 	if Input.is_action_just_pressed("ui_accept") && Global.bulletAvailable == true:
-		fire()
+			fire()
 		
 	#print(Global.currentBullet)
 
 func fire():
-	if Global.rapidfirepu == true:
-		var bullet = preload("res://Bullet.tscn")
-		var firedbullet = bullet.instance()
-		firedbullet.position = Vector2(position.x, position.y)
-		get_parent().call_deferred("add_child", firedbullet)
+	if (Global.rapidfirepu == true):
+			var bullet = preload("res://Bullet.tscn")
+			var firedbullet = bullet.instance()
+			firedbullet.position = Vector2(position.x, position.y)
+			get_parent().call_deferred("add_child", firedbullet)
 	
 	elif Global.currentBullet > 0 && Global.bulletAvailable == true:
 		var bullet = preload("res://Bullet.tscn")
