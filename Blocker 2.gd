@@ -29,6 +29,12 @@ func kill():
 		_rapidfirepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)
 		get_parent().get_parent().call_deferred("add_child", _rapidfirepowerup)
 		
+	if rng % 15 == 0 :
+			var clonepowerup = preload("res://ClonePowerUp.tscn")
+			var _clonepowerup = clonepowerup.instance()
+			_clonepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
+			get_parent().get_parent().call_deferred("add_child", _clonepowerup)
+		
 	queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
