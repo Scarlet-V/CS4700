@@ -55,7 +55,7 @@ func laser():
 	var firedlaser = laser.instance()
 
 	firedlaser.position = Vector2(position.x, position.y)
-	get_parent().call_deferred("add_child", firedlaser)
+	call_deferred("add_child", firedlaser)
 	Global.laserPowerUp = false
 	#print("TEST1")
 	#yield(get_tree().create_timer(2),"timeout")
