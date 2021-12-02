@@ -19,13 +19,16 @@ func _ready():
 
 
 func _on_Start_pressed():
+	print("Go to Main")
 	get_tree().change_scene("res://Main.tscn")
 
 
 func _on_Variant_pressed():
+	print("Go to Variant")
 	get_tree().change_scene("res://Variant.tscn")
 
 
 func _on_Settings_pressed():
+	print("Go to MenuSettings")
 	get_tree().change_scene("res://MenuSettings.tscn")
 	

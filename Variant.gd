@@ -11,6 +11,7 @@ var wave = preload("res://Wave.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print("Variant")
 	randomize()
 	new_game()
 	if $AudioStreamPlayer.playing == false:
@@ -20,6 +21,7 @@ func _ready():
 	
 	
 func game_over():
+	Global.reset()
 	get_tree().change_scene("res://GameOver.tscn")
 	Global.playerHealth = Global.playerMaxHealth
 	Global.currentLevel = 1

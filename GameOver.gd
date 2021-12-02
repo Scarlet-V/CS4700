@@ -8,6 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print("Game Over")
 	if $AudioStreamPlayer.playing == false:
 		$AudioStreamPlayer.play()
 	pass # Replace with function body.
