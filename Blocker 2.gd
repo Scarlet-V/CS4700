@@ -35,6 +35,12 @@ func kill():
 				var _clonepowerup = clonepowerup.instance()
 				_clonepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
 				get_parent().get_parent().call_deferred("add_child", _clonepowerup)
+				
+		if rng % 25 == 0 :
+			var laserpowerup = preload("res://LaserPowerUpIcon.tscn")
+			var _laserpowerup = laserpowerup.instance()
+			_laserpowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
+			get_parent().get_parent().call_deferred("add_child", _laserpowerup)
 		
 	Global.blocker2HP -= 1
 	

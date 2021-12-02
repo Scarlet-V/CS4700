@@ -23,8 +23,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") && Global.bulletAvailable == true:
 		fire()
 
-	if Input.is_action_just_pressed("ui_b") && get_tree().get_current_scene().get_name() == "Variant":
+	if Input.is_action_just_pressed("ui_b") && get_tree().get_current_scene().get_name() == "Variant" && Global.laserPowerUpAvail == true:
 		Global.laserPowerUp = true
+		Global.laserPowerUpAvail = false
 		yield(get_tree().create_timer(Global.laserPowerUpDuration),"timeout")
 		Global.laserPowerUp = false
 	

@@ -22,6 +22,7 @@ var rapidfirepu = false
 var rapidfirepuDuration = 3
 
 var laserPowerUp = false
+var laserPowerUpAvail = false
 var laserPowerUpDuration = 3
 var clone = false
 
