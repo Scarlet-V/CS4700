@@ -11,14 +11,15 @@ func _physics_process(delta):
 	
 func _on_ClonePU_body_entered(body):
 	if body.name == "Player":
-		Global.clone = true		
+		queue_free()
+		Global.clone = true
+		start()
 
 func start():
 	var bullet = preload("res://Bullet.tscn")
 	var firedbullet = bullet.instance()
 	firedbullet.position = Vector2(position.x, position.y)
 	get_parent().call_deferred("add_child", firedbullet)
-	queue_free()
 
 
 

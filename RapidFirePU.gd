@@ -18,6 +18,7 @@ func _physics_process(delta):
 		
 func _on_RapidFirePU_body_entered(body):
 	if body.name == "Player":
+		queue_free()
 		start()
 #   This code should work in theory but it does not reset after rapidfirepu is 
 #   false even if i force reset the currentbullet and max bullet
