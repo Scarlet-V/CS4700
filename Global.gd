@@ -17,7 +17,8 @@ var shootermaxHP = 1
 
 var bulletAvailable = true
 var rapidfirepu = false
-var laserPowerUp = true
+var laserPowerUp = false
+var laserPowerUpDuration = 3
 var clone = false
 
 var powerUptimer = 1

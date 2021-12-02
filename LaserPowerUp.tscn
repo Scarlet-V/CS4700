@@ -4,7 +4,7 @@
 [ext_resource path="res://art/lasereffect.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16.5, 375.5 )
+extents = Vector2( 37.5, 389.5 )
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.205128, 1 )
@@ -50,10 +50,9 @@ glow_hdr_luminance_cap = 2.0
 glow_bicubic_upscale = true
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 24, 330.25 )
+extents = Vector2( 40.5, 448.25 )
 
 [node name="LaserPowerUp" type="KinematicBody2D"]
-position = Vector2( 162, 325 )
 collision_layer = 8
 script = ExtResource( 1 )
 
@@ -66,9 +65,10 @@ default_color = Color( 0.5, 6, 1, 1 )
 [node name="Tween" type="Tween" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -3.5, -366.5 )
+position = Vector2( -0.5, -380.5 )
 shape = SubResource( 1 )
 one_way_collision = true
 
@@ -88,5 +88,6 @@ texture = ExtResource( 2 )
 environment = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -3, -410.75 )
+visible = false
+position = Vector2( 2, -453 )
 shape = SubResource( 9 )

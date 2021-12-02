@@ -6,12 +6,13 @@ onready var cooldownTimer := $CooldownTimer
 #onready var raycast2d := $RayCast2D
 #onready var vfx_line := $vfx_line
 onready var raycast = $LaserPowerUp
-
+var laserTimer = null
 
 func _ready():
 	screen_size = get_viewport_rect().size
 # Called when the node enters the scene tree for the first time.
 func _physics_process(delta):
+	
 	velocity.x = 0
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= speed
@@ -23,12 +24,19 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") && Global.bulletAvailable == true:
 		fire()
 
-	if Input.is_action_pressed("ui_b") && Global.laserPowerUp == true:
-		laser()
+	if Input.is_action_just_pressed("ui_b") && get_tree().get_current_scene().get_name() == "Variant":
+		Global.laserPowerUp = true
+		yield(get_tree().create_timer(4),"timeout")
+		Global.laserPowerUp = false
+	
+	if Global.laserPowerUp == true:
+		var laser = preload("res://LaserPowerUp.tscn")
+		var firedlaser = laser.instance()
+		firedlaser.position = Vector2(position.x, position.y)
+		get_parent().add_child(firedlaser)
 		
-	#if Input.is_action_just_released("ui_b"):
-	#	$LaserPowerUp.enabled = false
-	#	$LaserPowerUp.visible = false
+	
+	#print(laserTimer)
 
 func fire():
 	if get_tree().get_current_scene().get_name() == "Main":
@@ -61,18 +69,9 @@ func fire():
 func laser():
 	var laser = preload("res://LaserPowerUp.tscn")
 	var firedlaser = laser.instance()
-
 	firedlaser.position = Vector2(position.x, position.y)
-	call_deferred("add_child", firedlaser)
-	Global.laserPowerUp = false
-	#print("TEST1")
-	#yield(get_tree().create_timer(2),"timeout")
-	#print("TEST@2")
-	Global.laserPowerUp = true
-	if firedlaser != null && is_instance_valid(firedlaser):
-		print(is_instance_valid(firedlaser))
-		yield(get_tree().create_timer(2),"timeout")
-		firedlaser.queue_free()
+	get_parent().call_deferred("add_child", firedlaser)
+	firedlaser.queue_free()
 	#Global.laserPowerUp = false
 	#yield(get_tree().create_timer(2),"timeout")
 	#firedlaser.queue_free()

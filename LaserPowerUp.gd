@@ -15,8 +15,7 @@ func _physics_process(delta):
 	if collision and collision.collider.has_method("kill"):
 		collision.collider.kill()
 		#print(collision.collider.has_method("kill"))
-		#queue_free()
-
+		queue_free()
 	
 #func _physics_process(delta):
 	#print(is_colliding())
