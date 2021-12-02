@@ -16,7 +16,11 @@ var blocker2maxHP = 1
 var shootermaxHP = 1
 
 var bulletAvailable = true
+var bulletReloadTimer = 0.25
+
 var rapidfirepu = false
+var rapidfirepuDuration = 3
+
 var laserPowerUp = false
 var laserPowerUpDuration = 3
 var clone = false

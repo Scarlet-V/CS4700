@@ -6,7 +6,6 @@ onready var cooldownTimer := $CooldownTimer
 #onready var raycast2d := $RayCast2D
 #onready var vfx_line := $vfx_line
 onready var raycast = $LaserPowerUp
-var laserTimer = null
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -26,7 +25,7 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("ui_b") && get_tree().get_current_scene().get_name() == "Variant":
 		Global.laserPowerUp = true
-		yield(get_tree().create_timer(4),"timeout")
+		yield(get_tree().create_timer(Global.laserPowerUpDuration),"timeout")
 		Global.laserPowerUp = false
 	
 	if Global.laserPowerUp == true:
@@ -35,8 +34,9 @@ func _physics_process(delta):
 		firedlaser.position = Vector2(position.x, position.y)
 		get_parent().add_child(firedlaser)
 		
-	
-	#print(laserTimer)
+	if Global.rapidfirepu == true:
+		yield(get_tree().create_timer(Global.rapidfirepuDuration),"timeout")
+		Global.rapidfirepu = false
 
 func fire():
 	if get_tree().get_current_scene().get_name() == "Main":
@@ -45,7 +45,7 @@ func fire():
 		firedbullet.position = Vector2(position.x, position.y)
 		get_parent().call_deferred("add_child", firedbullet)
 		Global.bulletAvailable = false
-		
+
 	else:
 		if (Global.rapidfirepu == true):
 			var bullet = preload("res://Bullet.tscn")
@@ -84,7 +84,7 @@ func laser():
 
 func reload():
 	print("RELOADING")
-	yield(get_tree().create_timer(3),"timeout")
+	yield(get_tree().create_timer(1),"timeout")
 	Global.currentBullet = Global.maxBullet
 	Global.bulletAvailable = true
 
