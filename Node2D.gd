@@ -1,4 +1,5 @@
 extends Node2D
 
 func kill():
-	Global.bulletAvailable = true
+	if get_tree().get_current_scene().get_name() == "Main":
+		Global.bulletAvailable = true

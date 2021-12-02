@@ -31,24 +31,32 @@ func _physics_process(delta):
 	#	$LaserPowerUp.visible = false
 
 func fire():
-	if (Global.rapidfirepu == true):
-			var bullet = preload("res://Bullet.tscn")
-			var firedbullet = bullet.instance()
-			firedbullet.position = Vector2(position.x, position.y)
-			get_parent().call_deferred("add_child", firedbullet)
-	
-	elif Global.currentBullet > 0 && Global.bulletAvailable == true:
+	if get_tree().get_current_scene().get_name() == "Main":
 		var bullet = preload("res://Bullet.tscn")
 		var firedbullet = bullet.instance()
 		firedbullet.position = Vector2(position.x, position.y)
 		get_parent().call_deferred("add_child", firedbullet)
-		#This is what plays a noise when a bullet is fired
-		#$PlayerBulletSound.play()
-		Global.currentBullet -= 1
-		
-	if Global.currentBullet == 0:
 		Global.bulletAvailable = false
-		reload()
+		
+	else:
+		if (Global.rapidfirepu == true):
+			var bullet = preload("res://Bullet.tscn")
+			var firedbullet = bullet.instance()
+			firedbullet.position = Vector2(position.x, position.y)
+			get_parent().call_deferred("add_child", firedbullet)
+		
+		elif Global.currentBullet > 0 && Global.bulletAvailable == true:
+			var bullet = preload("res://Bullet.tscn")
+			var firedbullet = bullet.instance()
+			firedbullet.position = Vector2(position.x, position.y)
+			get_parent().call_deferred("add_child", firedbullet)
+			#This is what plays a noise when a bullet is fired
+			#$PlayerBulletSound.play()
+			Global.currentBullet -= 1
+			
+		if Global.currentBullet == 0:
+			Global.bulletAvailable = false
+			reload()
 		
 func laser():
 	var laser = preload("res://LaserPowerUp.tscn")

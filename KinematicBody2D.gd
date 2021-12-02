@@ -1,5 +1,5 @@
 extends KinematicBody2D
 
 func kill():
-	queue_free()
- 
+	if get_tree().get_current_scene().get_name() == "Main":
+		Global.bulletAvailable = true

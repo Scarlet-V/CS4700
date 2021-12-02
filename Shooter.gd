@@ -40,6 +40,8 @@ func kill():
 	if Global.shooterHP == 0:
 		Global.shooterHP = Global.shootermaxHP
 		queue_free()
+	if get_tree().get_current_scene().get_name() == "Main":
+		Global.bulletAvailable = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
