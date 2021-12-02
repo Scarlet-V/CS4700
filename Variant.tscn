@@ -384,4 +384,5 @@ __meta__ = {
 stream = ExtResource( 13 )
 bus = "Music"
 
+[connection signal="cleared" from="Wave" to="." method="_on_Wave_cleared"]
 [connection signal="pressed" from="Settings Icon" to="Settings Icon" method="_on_Settings_Icon_pressed"]

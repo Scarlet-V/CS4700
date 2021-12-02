@@ -15,6 +15,9 @@ var blocker1maxHP = 1
 var blocker2maxHP = 1
 var shootermaxHP = 1
 
+export var max_delay = 10	#Max time between shots
+export var min_delay = 3	#Min time between shots
+
 var bulletAvailable = true
 var bulletReloadTimer = 0.25
 
@@ -43,10 +46,18 @@ func reset():
 	blocker1maxHP = 1
 	blocker2maxHP = 1
 	shootermaxHP = 1
+	max_delay = 10
+	min_delay = 3
 
 	bulletAvailable = true
-	rapidfirepu = false
-	laserPowerUp = true
-	clone = false
+	bulletReloadTimer = 0.25
 
+	rapidfirepu = false
+	rapidfirepuDuration = 3
+
+	laserPowerUp = false
+	laserPowerUpAvail = false
+	laserPowerUpDuration = 3
+	clone = false
+	
 	powerUptimer = 1

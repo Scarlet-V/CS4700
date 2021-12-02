@@ -56,6 +56,11 @@ func _on_Wave_cleared(node):
 	Global.blocker1HP = Global.blocker1maxHP
 	Global.blocker2HP = Global.blocker2maxHP
 	
+	if Global.max_delay > 3:
+		Global.max_delay -= .25
+	if Global.min_delay > 0:
+		Global.min_delay -= .25
+	
 	if Global.currentLevel % 3 == 0:
 		Global.shootermaxHP += 1
 		Global.blocker1maxHP += 1
