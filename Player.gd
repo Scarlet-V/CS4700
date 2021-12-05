@@ -38,6 +38,12 @@ func _physics_process(delta):
 	if Global.rapidfirepu == true:
 		yield(get_tree().create_timer(Global.rapidfirepuDuration),"timeout")
 		Global.rapidfirepu = false
+		
+	if Global.clone == true:
+		var clonepu = preload("res://ClonePowerUp.tscn")
+		var cloneactive = clonepu.instance()
+		cloneactive.position = Vector2(position.x+100, position.y)
+		get_parent().add_child(cloneactive)
 
 func fire():
 	if get_tree().get_current_scene().get_name() == "Main":

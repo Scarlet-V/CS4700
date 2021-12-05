@@ -30,7 +30,7 @@ func kill():
 			var _rapidfirepowerup = rapidfirepowerup.instance()
 			_rapidfirepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
 			get_parent().get_parent().call_deferred("add_child", _rapidfirepowerup)
-		elif rng <= 18 :
+		elif rng <= 80 :
 			var laserpowerup = preload("res://LaserPowerUpIcon.tscn")
 			var _laserpowerup = laserpowerup.instance()
 			_laserpowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
