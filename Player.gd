@@ -28,12 +28,24 @@ func _physics_process(delta):
 		Global.laserPowerUpAvail = false
 		yield(get_tree().create_timer(Global.laserPowerUpDuration),"timeout")
 		Global.laserPowerUp = false
+		
+	if Input.is_action_just_pressed("ui_v"):
+		Global.lightningPowerUp = true
+		Global.laserPowerUpAvail = false
+		yield(get_tree().create_timer(Global.laserPowerUpDuration),"timeout")
+		Global.lightningPowerUp = false
 	
 	if Global.laserPowerUp == true:
 		var laser = preload("res://LaserPowerUp.tscn")
 		var firedlaser = laser.instance()
 		firedlaser.position = Vector2(position.x, position.y)
 		get_parent().add_child(firedlaser)
+		
+	if Global.lightningPowerUp == true:
+		var lightning = preload("res://LaserPowerUp_2.tscn")
+		var firedlightning= lightning.instance()
+		firedlightning.position = Vector2(position.x, position.y)
+		get_parent().add_child(firedlightning)
 		
 	if Global.rapidfirepu == true:
 		yield(get_tree().create_timer(Global.rapidfirepuDuration),"timeout")

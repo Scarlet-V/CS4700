@@ -81,17 +81,20 @@ default_color = Color( 0.5, 6, 1, 1 )
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
 position = Vector2( -0.5, -380.5 )
 shape = SubResource( 10 )
 one_way_collision = true
 
 [node name="CastingParticle" type="Particles2D" parent="."]
+visible = false
 scale = Vector2( 0.2, 0.2 )
 lifetime = 0.3
 process_material = SubResource( 15 )
 texture = ExtResource( 2 )
 
 [node name="CollisionParticles2D" type="Particles2D" parent="."]
+visible = false
 scale = Vector2( 0.2, 0.2 )
 lifetime = 0.3
 process_material = SubResource( 7 )
