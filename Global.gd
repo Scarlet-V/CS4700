@@ -24,12 +24,14 @@ var bulletReloadTimer = 0.25
 var rapidfirepu = false
 var rapidfirepuDuration = 3
 
+var invinciblepu = false
+var invinciblepuDuration = 4
+
 var laserPowerUp = false
 var laserPowerUpAvail = false
 var laserPowerUpDuration = 3
 var clone = false
 var lightningPowerUp = false
-var invinciblepu = false
 
 var powerUptimer = 1
 
@@ -56,6 +58,9 @@ func reset():
 
 	rapidfirepu = false
 	rapidfirepuDuration = 3
+	
+	invinciblepu = false
+	invinciblepuDuration = 4
 
 	laserPowerUp = false
 	laserPowerUpAvail = false
