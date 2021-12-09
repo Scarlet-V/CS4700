@@ -47,6 +47,12 @@ func _physics_process(delta):
 		firedlightning.position = Vector2(position.x, position.y)
 		get_parent().add_child(firedlightning)
 		
+	if Global.invinciblepu == true:
+		var invincible = preload("res://InvinciblePowerUp.tscn")
+		var invinciblepuactive= invincible.instance()
+		invinciblepuactive.position = Vector2(position.x, position.y)
+		get_parent().add_child(invinciblepuactive)
+		
 	if Global.rapidfirepu == true:
 		yield(get_tree().create_timer(Global.rapidfirepuDuration),"timeout")
 		Global.rapidfirepu = false

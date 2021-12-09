@@ -29,6 +29,7 @@ var laserPowerUpAvail = false
 var laserPowerUpDuration = 3
 var clone = false
 var lightningPowerUp = false
+var invinciblepu = false
 
 var powerUptimer = 1
 
