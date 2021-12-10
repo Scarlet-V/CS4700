@@ -5,9 +5,8 @@ var move_speed = 300
 func _physics_process(delta):
 	position.y += move_speed * delta
 
-func _on_LaserPowerUpBody_body_entered(body):
+func _on_LightningBody_body_entered(body):
 	if body.name == "Player":
-		Global.laserPowerUpAvail = true
+		Global.lightning = true
 		queue_free()
-		print("Laser Powerup")
-		Global.laserPowerUp = true
+		print("lightning Powerup")

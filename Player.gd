@@ -23,23 +23,25 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") && Global.bulletAvailable == true:
 		fire()
 
-	if Input.is_action_just_pressed("ui_b") && get_tree().get_current_scene().get_name() == "Variant" && Global.laserPowerUpAvail == true:
-		Global.laserPowerUp = true
-		Global.laserPowerUpAvail = false
-		yield(get_tree().create_timer(Global.laserPowerUpDuration),"timeout")
-		Global.laserPowerUp = false
+	#if Input.is_action_just_pressed("ui_b") && get_tree().get_current_scene().get_name() == "Variant" && Global.laserPowerUpAvail == true:
+	#	Global.laserPowerUp = true
+	#	Global.laserPowerUpAvail = false
+	#	yield(get_tree().create_timer(Global.laserPowerUpDuration),"timeout")
+	#	Global.laserPowerUp = false
 		
-	if Input.is_action_just_pressed("ui_v"):
-		Global.lightningPowerUp = true
-		Global.laserPowerUpAvail = false
-		yield(get_tree().create_timer(Global.laserPowerUpDuration),"timeout")
-		Global.lightningPowerUp = false
+	#if Input.is_action_just_pressed("ui_v"):
+	#	Global.lightningPowerUp = true
+	#	Global.laserPowerUpAvail = false
+	#	yield(get_tree().create_timer(Global.laserPowerUpDuration),"timeout")
+	#	Global.lightningPowerUp = false
 	
 	if Global.laserPowerUp == true:
 		var laser = preload("res://LaserPowerUp.tscn")
 		var firedlaser = laser.instance()
 		firedlaser.position = Vector2(position.x, position.y)
 		get_parent().add_child(firedlaser)
+		yield(get_tree().create_timer(3),"timeout")
+		Global.laserPowerUp = false
 		
 	if Global.lightningPowerUp == true:
 		var lightning = preload("res://LaserPowerUp_2.tscn")
