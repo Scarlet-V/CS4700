@@ -30,26 +30,21 @@ func kill():
 			var _rapidfirepowerup = rapidfirepowerup.instance()
 			_rapidfirepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
 			get_parent().get_parent().call_deferred("add_child", _rapidfirepowerup)
-		elif rng <= 43:
-			var invincible = preload("res://InvinciblePowerUp.tscn")
-			var invinciblepuactive= invincible.instance()
-			invinciblepuactive.position = Vector2(position.x, position.y)
-			get_parent().add_child(invinciblepuactive)
 		elif rng <= 80 :
 			var laserpowerup = preload("res://LaserPowerUpIcon.tscn")
 			var _laserpowerup = laserpowerup.instance()
 			_laserpowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
 			get_parent().get_parent().call_deferred("add_child", _laserpowerup)
-		elif rng != 85: #CHANGE -1 TO LIKE 28 IF WE WANT A 10% CHANCE
+		elif rng <= 85: #CHANGE -1 TO LIKE 28 IF WE WANT A 10% CHANCE
 			var clonepowerup = preload("res://ClonePowerUp.tscn")
 			var _clonepowerup = clonepowerup.instance()
 			_clonepowerup.position = Vector2(position.x + get_parent().position.x + 100, position.y + get_parent().position.y + 50)	
 			get_parent().get_parent().call_deferred("add_child", _clonepowerup)
-		else:
-			var timepowerup = preload("res://TimePowerUp.tscn")
-			var _timepowerup = timepowerup.instance()
-			_timepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
-			get_parent().get_parent().call_deferred("add_child", _timepowerup)
+		elif rng <=43:
+			var invincible = preload("res://InvinciblePowerUp.tscn")
+			var invinciblepuactive= invincible.instance()
+			invinciblepuactive.position = Vector2(position.x, position.y)
+			get_parent().add_child(invinciblepuactive)
 			
 	Global.blocker2HP -= 1
 	

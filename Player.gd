@@ -35,7 +35,7 @@ func _physics_process(delta):
 	#	yield(get_tree().create_timer(Global.laserPowerUpDuration),"timeout")
 	#	Global.lightningPowerUp = false
 	
-	if Global.laserPowerUp:
+	if Global.laserPowerUp == true:
 		var laser = preload("res://LaserPowerUp.tscn")
 		var firedlaser = laser.instance()
 		firedlaser.position = Vector2(position.x, position.y)
@@ -43,31 +43,33 @@ func _physics_process(delta):
 		yield(get_tree().create_timer(3),"timeout")
 		Global.laserPowerUp = false
 		
-	if Global.lightningPowerUp:
+	if Global.lightningPowerUp == true:
 		var lightning = preload("res://LaserPowerUp_2.tscn")
 		var firedlightning= lightning.instance()
 		firedlightning.position = Vector2(position.x, position.y)
 		get_parent().add_child(firedlightning)
 		
-	if Global.invinciblepu:
+	if Global.invinciblepu == true:
 		yield(get_tree().create_timer(Global.invinciblepuDuration),"timeout")
 		Global.invinciblepu = false
 		
-	if Global.rapidfirepu:
+	if Global.rapidfirepu == true:
 		yield(get_tree().create_timer(Global.rapidfirepuDuration),"timeout")
 		Global.rapidfirepu = false
 		
-	if Global.clone:
-		var clonepu = preload("res://ClonePowerUp.tscn")
+	if Global.clone == true:
+		var clonepu = load("res://ClonePowerUp.tscn")
 		var cloneactive = clonepu.instance()
 		cloneactive.position = Vector2(position.x+100, position.y)
 		get_parent().add_child(cloneactive)
-		
+		yield(get_tree().create_timer(Global.clonepuDuration),"timeout")
+		Global.clone = false	
+		cloneactive.queue_free()
 		
 
 func fire():
 	if get_tree().get_current_scene().get_name() == "Main":
-		var bullet = preload("res://Bullet.tscn")
+		var bullet = load("res://Bullet.tscn")
 		var firedbullet = bullet.instance()
 		firedbullet.position = Vector2(position.x, position.y)
 		get_parent().call_deferred("add_child", firedbullet)
@@ -75,13 +77,13 @@ func fire():
 
 	else:
 		if (Global.rapidfirepu == true):
-			var bullet = preload("res://Bullet.tscn")
+			var bullet = load("res://Bullet.tscn")
 			var firedbullet = bullet.instance()
 			firedbullet.position = Vector2(position.x, position.y)
 			get_parent().call_deferred("add_child", firedbullet)
 		
 		elif Global.currentBullet > 0 && Global.bulletAvailable == true:
-			var bullet = preload("res://Bullet.tscn")
+			var bullet = load("res://Bullet.tscn")
 			var firedbullet = bullet.instance()
 			firedbullet.position = Vector2(position.x, position.y)
 			get_parent().call_deferred("add_child", firedbullet)

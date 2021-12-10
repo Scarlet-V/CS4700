@@ -8,8 +8,7 @@ export var min_delay = Global.min_delay	#Min time between shots
 var shoot_delay = randi()%max_delay		#Time to wait until next shot
 	
 func _physics_process(delta):
-	if Global.timePu != true:
-		shooting_count += delta
+	shooting_count += delta
 	if shooting_count >= shoot_delay:
 		var bullet = preload("res://Enemybullet.tscn")
 		var fired_bullet = bullet.instance()
@@ -29,8 +28,6 @@ func kill():
 		randomize()
 		var rng = rand_range(0, 100)
 		print("rng: " + str(rng))
-		rng = 100
-		
 		if rng <= 10:
 			var extrabulletpowerup = preload("res://ExtraBulletPowerUp.tscn")
 			var _extrabulletpowerup = extrabulletpowerup.instance()
@@ -41,12 +38,7 @@ func kill():
 			var _rapidfirepowerup = rapidfirepowerup.instance()
 			_rapidfirepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
 			get_parent().get_parent().call_deferred("add_child", _rapidfirepowerup)
-		elif rng <= 43:
-			var invincible = preload("res://InvinciblePowerUp.tscn")
-			var invinciblepuactive= invincible.instance()
-			invinciblepuactive.position = Vector2(position.x, position.y)
-			get_parent().add_child(invinciblepuactive)
-		elif rng <= 80 :
+		elif rng <= 18 :
 			var laserpowerup = preload("res://LaserPowerUpIcon.tscn")
 			var _laserpowerup = laserpowerup.instance()
 			_laserpowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
@@ -56,11 +48,11 @@ func kill():
 			var _clonepowerup = clonepowerup.instance()
 			_clonepowerup.position = Vector2(position.x + get_parent().position.x + 100, position.y + get_parent().position.y + 50)	
 			get_parent().get_parent().call_deferred("add_child", _clonepowerup)
-		else:
-			var timepowerup = preload("res://TimePowerUp.tscn")
-			var _timepowerup = timepowerup.instance()
-			_timepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
-			get_parent().get_parent().call_deferred("add_child", _timepowerup)
+		elif rng <=43:
+			var invincible = preload("res://InvinciblePowerUp.tscn")
+			var invinciblepuactive= invincible.instance()
+			invinciblepuactive.position = Vector2(position.x, position.y)
+			get_parent().add_child(invinciblepuactive)
 			
 	Global.shooterHP -= 1
 	

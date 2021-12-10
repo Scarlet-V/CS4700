@@ -21,18 +21,14 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	if Global.timePu:
-		yield(get_tree().create_timer(Global.timeDuration),"timeout")
-		move = true
-		Global.timePu = false
-	if move && !Global.timePu:
+	if move:
 		position += direction * delta
 		checkForBorderHit()
 		checkForBottomReached()
 		#If all the enemies are killed tell Main in _on_Wave_cleared
-	if waveCleared():
-		Global.currentLevel += 1
-		emit_signal("cleared", self)
+		if waveCleared():
+			Global.currentLevel += 1
+			emit_signal("cleared", self)
 			
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
