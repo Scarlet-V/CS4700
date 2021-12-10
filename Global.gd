@@ -38,6 +38,8 @@ var laserPowerUpDuration = 3
 var clone = false
 var lightningPowerUp = false
 
+var lightning = false
+
 var powerUptimer = 1
 
 func reset():
