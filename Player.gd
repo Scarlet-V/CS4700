@@ -56,14 +56,18 @@ func _physics_process(delta):
 		Global.rapidfirepu = false
 		
 	if Global.clone == true:
-		var clonepu = preload("res://ClonePowerUp.tscn")
+		var clonepu = load("res://ClonePowerUp.tscn")
 		var cloneactive = clonepu.instance()
 		cloneactive.position = Vector2(position.x+100, position.y)
 		get_parent().add_child(cloneactive)
+		yield(get_tree().create_timer(Global.clonepuDuration),"timeout")
+		Global.clone = false	
+		cloneactive.queue_free()
+		
 
 func fire():
 	if get_tree().get_current_scene().get_name() == "Main":
-		var bullet = preload("res://Bullet.tscn")
+		var bullet = load("res://Bullet.tscn")
 		var firedbullet = bullet.instance()
 		firedbullet.position = Vector2(position.x, position.y)
 		get_parent().call_deferred("add_child", firedbullet)
@@ -71,13 +75,13 @@ func fire():
 
 	else:
 		if (Global.rapidfirepu == true):
-			var bullet = preload("res://Bullet.tscn")
+			var bullet = load("res://Bullet.tscn")
 			var firedbullet = bullet.instance()
 			firedbullet.position = Vector2(position.x, position.y)
 			get_parent().call_deferred("add_child", firedbullet)
 		
 		elif Global.currentBullet > 0 && Global.bulletAvailable == true:
-			var bullet = preload("res://Bullet.tscn")
+			var bullet = load("res://Bullet.tscn")
 			var firedbullet = bullet.instance()
 			firedbullet.position = Vector2(position.x, position.y)
 			get_parent().call_deferred("add_child", firedbullet)
