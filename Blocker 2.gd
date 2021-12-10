@@ -39,7 +39,7 @@ func kill():
 			var invinciblepuactive= invincible.instance()
 			invinciblepuactive.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y)
 			get_parent().get_parent().add_child(invinciblepuactive)
-		elif rng <= 80 :
+		elif rng <= 80 && !Global.laserPowerUpActive:
 			var laserpowerup = preload("res://LaserPowerUpIcon.tscn")
 			var _laserpowerup = laserpowerup.instance()
 			_laserpowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
@@ -47,7 +47,7 @@ func kill():
 		elif rng <= 85: #CHANGE -1 TO LIKE 28 IF WE WANT A 10% CHANCE
 			var clonepowerup = preload("res://ClonePowerUp.tscn")
 			var _clonepowerup = clonepowerup.instance()
-			_clonepowerup.position = Vector2(position.x + get_parent().position.x + 100, position.y + get_parent().position.y + 50)	
+			_clonepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
 			get_parent().get_parent().call_deferred("add_child", _clonepowerup)
 			
 	Global.blocker2HP -= 1

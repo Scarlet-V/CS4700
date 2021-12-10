@@ -11,7 +11,7 @@ onready var raycast = $LaserPowerUp
 	#cast_to = Vector2(max_distance, 0)
 
 func _physics_process(delta):
-	queue_free()
+	pass#queue_free()
 
 
 func _on_Area2D_body_entered(body):
