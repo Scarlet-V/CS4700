@@ -67,6 +67,7 @@ func _physics_process(delta):
 		var cloneactive = clonepu.instance()
 		cloneactive.position = Vector2(position.x+100, position.y)
 		get_parent().add_child(cloneactive)
+		yield(get_tree().create_timer(Global.clonepuDuration),"timeout")
 		
 
 func fire():
