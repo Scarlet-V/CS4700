@@ -35,10 +35,15 @@ var invinciblepuDuration = 4
 var laserPowerUp = false
 var laserPowerUpAvail = false
 var laserPowerUpDuration = 3
-var clone = false
-var lightningPowerUp = false
 
+var clone = false
+#var cloneCreated = false
+
+var lightningPowerUp = false
 var lightning = false
+
+var timePu = false
+var timeDuration = 3
 
 var powerUptimer = 1
 
@@ -72,6 +77,13 @@ func reset():
 	laserPowerUp = false
 	laserPowerUpAvail = false
 	laserPowerUpDuration = 3
+	
 	clone = false
+	#cloneCreated = false
+	
+	lightningPowerUp = false
+	lightning = false
+	
+	timePu = false
 	
 	powerUptimer = 1
