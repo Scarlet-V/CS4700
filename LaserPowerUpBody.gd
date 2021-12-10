@@ -10,3 +10,4 @@ func _on_LaserPowerUpBody_body_entered(body):
 		Global.laserPowerUpAvail = true
 		queue_free()
 		print("Laser Powerup")
+		Global.laserPowerUp = true
