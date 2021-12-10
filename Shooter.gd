@@ -6,6 +6,9 @@ var shooting_count = 0
 export var max_delay = Global.max_delay	#Max time between shots
 export var min_delay = Global.min_delay	#Min time between shots
 var shoot_delay = randi()%max_delay		#Time to wait until next shot
+
+func _ready():
+	add_to_group("enemies")
 	
 func _physics_process(delta):
 	#If the wave isn't paused keep shooting
@@ -25,6 +28,7 @@ func _physics_process(delta):
 	#var collision = move_and_collide(Vector2.DOWN * delta * move_speed)
 	
 func kill():
+	print("Shooter Killed")
 	Global.playerScore += 40
 	if get_tree().get_current_scene().get_name() == "Variant":
 		randomize()

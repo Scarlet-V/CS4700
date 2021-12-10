@@ -122,6 +122,7 @@ func reload():
 
 func kill():
 	get_tree().change_scene("res://GameOver.tscn")
+	print("Player Killed")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

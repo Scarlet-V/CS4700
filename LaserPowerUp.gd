@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 onready var line = $Line2D
 onready var end = $end
@@ -11,13 +11,11 @@ onready var raycast = $LaserPowerUp
 	#cast_to = Vector2(max_distance, 0)
 
 func _physics_process(delta):
-	var collision = move_and_collide(Vector2.UP * 0)
-	if collision and collision.collider.has_method("kill"):
-		collision.collider.kill()
-		#print(collision.collider.has_method("kill"))
-		queue_free()
-	
-#func _physics_process(delta):
-	#print(is_colliding())
-	#var enemy = get_collider()
-	#print(enemy)
+	queue_free()
+
+
+func _on_Area2D_body_entered(body):
+	#print(body.is_in_group("enemies"))
+	if body.is_in_group("enemies"):
+		body.kill()
+		print("hit " + str(body))

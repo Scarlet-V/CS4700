@@ -10,11 +10,15 @@ var vertical_distance = 20
 var direction = Vector2(move_speed, 0)
 var move = true
 
+func _ready():
+	add_to_group("enemies")
+
 func _physics_process(delta):
 	#var collision = move_and_collide(Vector2.DOWN * delta * move_speed)
 	pass
 	
 func kill():
+	print("Blocker 1 Killed")
 	Global.playerScore += 20
 	if get_tree().get_current_scene().get_name() == "Variant":
 		randomize()

@@ -18,7 +18,7 @@ signal cleared
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	add_to_group("enemies")
 
 func _physics_process(delta):
 	if Global.timePu:

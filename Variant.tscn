@@ -19,7 +19,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 665, 24 )
 
-[node name="Variant" type="Node"]
+[node name="Variant" type="Node" groups=[
+"enemies",
+]]
 script = ExtResource( 6 )
 
 [node name="Background" type="Node2D" parent="."]
