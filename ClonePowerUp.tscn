@@ -20,7 +20,4 @@ texture = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClonePU"]
 shape = SubResource( 1 )
 
-[node name="Timer" type="Timer" parent="ClonePU"]
-
 [connection signal="body_entered" from="ClonePU" to="ClonePU" method="_on_ClonePU_body_entered"]
-[connection signal="timeout" from="ClonePU/Timer" to="ClonePU" method="_on_Timer_timeout"]
