@@ -62,7 +62,7 @@ glow_blend_mode = 0
 glow_hdr_luminance_cap = 2.0
 glow_bicubic_upscale = true
 
-[node name="LaserPowerUp" type="Node2D"]
+[node name="LaserPowerUp2" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource( 1 )

@@ -7,11 +7,6 @@ var playerMaxHealth = 1
 var playerScore = 0
 var currentLevel = 1
 
-var cloneMaxBullet =1 
-var clonecurrentBullet =1
-var clonebulletAvailable = true
-var clonepuDuration = 4
-
 var enemyMS = 100
 var blocker1HP = 1
 var blocker2HP = 1
@@ -37,7 +32,13 @@ var laserPowerUpActive = false
 var laserPowerUpAvail = false
 var laserPowerUpDuration = 1.5
 
+
+var cloneMaxBullet =1 
+var clonecurrentBullet =1
+var clonebulletAvailable = true
+var clonepuDuration = 4
 var clone = false
+var cloneActive = false
 #var cloneCreated = false
 
 var lightningPowerUp = false
@@ -82,6 +83,7 @@ func reset():
 	laserPowerUpDuration = 1.5
 	
 	clone = false
+	cloneActive = false
 	#cloneCreated = false
 	
 	lightningPowerUp = false

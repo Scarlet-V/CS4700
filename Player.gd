@@ -65,11 +65,13 @@ func _physics_process(delta):
 		
 	if Global.clone:
 		Global.clone = false
+		Global.cloneActive = true
 		var clonepu = preload("res://Clone.tscn")
 		var cloneactive = clonepu.instance()
-		cloneactive.position = Vector2(position.x+100, position.y)
-		get_parent().add_child(cloneactive)
+		cloneactive.position = Vector2(100, 0)
+		add_child(cloneactive)
 		yield(get_tree().create_timer(Global.clonepuDuration),"timeout")
+		Global.cloneActive = false
 		
 		
 

@@ -6,10 +6,12 @@ var delay = 1;
 onready var cooldownTimer := $CooldownTimer
 
 func _physics_process(delta):
-	if Global.clone == true:
-		if Input.is_action_just_pressed("ui_accept") && Global.clonebulletAvailable == true:
+	if Global.cloneActive == true:
+		if Input.is_action_just_pressed("ui_accept"):
 			print("clone fired")
 			fire()
+	else:
+		queue_free()
 	
 func _on_ClonePU_body_entered(body):
 	if body.name == "Player":
