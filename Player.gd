@@ -110,6 +110,11 @@ func reload():
 	yield(get_tree().create_timer(1),"timeout")
 	Global.currentBullet = Global.maxBullet
 	Global.bulletAvailable = true
+	if Global.clone == true:
+		print("RELOADING")
+		yield(get_tree().create_timer(1),"timeout")
+		Global.clonecurrentBullet = Global.cloneMaxBullet
+		Global.clonebulletAvailable = true
 
 func kill():
 	get_tree().change_scene("res://GameOver.tscn")

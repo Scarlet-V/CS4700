@@ -7,6 +7,11 @@ var playerMaxHealth = 1
 var playerScore = 0
 var currentLevel = 1
 
+var cloneMaxBullet =1 
+var clonecurrentBullet =1
+var clonebulletAvailable = true
+var clonepuDuration = 4
+
 var enemyMS = 100
 var blocker1HP = 1
 var blocker2HP = 1
