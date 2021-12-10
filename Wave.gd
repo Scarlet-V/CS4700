@@ -22,9 +22,12 @@ func _ready():
 
 func _physics_process(delta):
 	if Global.timePu:
+		Global.timePu = false
+		move = false
+		print("start pause")
 		yield(get_tree().create_timer(Global.timeDuration),"timeout")
 		move = true
-		Global.timePu = false
+		print("pause finished")
 	if move && !Global.timePu:
 		position += direction * delta
 		checkForBorderHit()
