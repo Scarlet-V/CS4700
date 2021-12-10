@@ -8,7 +8,9 @@ export var min_delay = Global.min_delay	#Min time between shots
 var shoot_delay = randi()%max_delay		#Time to wait until next shot
 	
 func _physics_process(delta):
-	shooting_count += delta
+	#If the wave isn't paused keep shooting
+	if !Global.paused:
+		shooting_count += delta
 	if shooting_count >= shoot_delay:
 		var bullet = preload("res://Enemybullet.tscn")
 		var fired_bullet = bullet.instance()
@@ -54,7 +56,7 @@ func kill():
 		elif rng <= 43:
 			var invincible = preload("res://InvinciblePowerUp.tscn")
 			var invinciblepuactive= invincible.instance()
-			invinciblepuactive.position = Vector2(position.x, position.y)
+			invinciblepuactive.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y)
 			get_parent().get_parent().add_child(invinciblepuactive)
 		else:
 			var timepowerup = preload("res://TimePowerUp.tscn")

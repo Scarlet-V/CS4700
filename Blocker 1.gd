@@ -33,7 +33,7 @@ func kill():
 		elif rng <= 43:
 			var invincible = preload("res://InvinciblePowerUp.tscn")
 			var invinciblepuactive= invincible.instance()
-			invinciblepuactive.position = Vector2(position.x, position.y)
+			invinciblepuactive.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y)
 			get_parent().get_parent().add_child(invinciblepuactive)
 		elif rng <= 80 : 
 			var laserpowerup = preload("res://LaserPowerUpIcon.tscn")

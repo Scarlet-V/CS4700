@@ -43,6 +43,7 @@ var lightningPowerUp = false
 var lightning = false
 
 var timePu = false
+var paused = false
 var timeDuration = 3
 
 var powerUptimer = 1
@@ -85,5 +86,7 @@ func reset():
 	lightning = false
 	
 	timePu = false
+	paused = false
+	timeDuration = timeDuration
 	
 	powerUptimer = 1
