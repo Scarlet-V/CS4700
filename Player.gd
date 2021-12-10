@@ -50,6 +50,10 @@ func _physics_process(delta):
 		get_parent().add_child(firedlightning)
 		
 	if Global.invinciblepu:
+		var barrier = preload("res://BarrierInvincible.tscn")
+		var _barrier= barrier.instance()
+		_barrier.position = Vector2(position.x, position.y)
+		get_parent().add_child(_barrier)
 		yield(get_tree().create_timer(Global.invinciblepuDuration),"timeout")
 		Global.invinciblepu = false
 		
@@ -62,7 +66,6 @@ func _physics_process(delta):
 		var cloneactive = clonepu.instance()
 		cloneactive.position = Vector2(position.x+100, position.y)
 		get_parent().add_child(cloneactive)
-		
 		
 
 func fire():
