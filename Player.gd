@@ -62,7 +62,8 @@ func _physics_process(delta):
 		Global.rapidfirepu = false
 		
 	if Global.clone:
-		var clonepu = preload("res://ClonePowerUp.tscn")
+		Global.clone = false
+		var clonepu = preload("res://Clone.tscn")
 		var cloneactive = clonepu.instance()
 		cloneactive.position = Vector2(position.x+100, position.y)
 		get_parent().add_child(cloneactive)
