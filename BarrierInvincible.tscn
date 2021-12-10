@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://art/particles/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/circle_02.png" type="Texture" id=1]
+[ext_resource path="res://BarrierInvincible.gd" type="Script" id=2]
+
+[node name="BarrierInvincible" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="Circle02" type="Sprite" parent="Sprite"]
+position = Vector2( 0, -2 )
+texture = ExtResource( 1 )

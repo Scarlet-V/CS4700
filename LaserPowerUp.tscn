@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://LaserPowerUp.gd" type="Script" id=1]
 [ext_resource path="res://art/lasereffect.png" type="Texture" id=2]
@@ -6,8 +6,8 @@
 [ext_resource path="res://art/particles/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/star_01.png" type="Texture" id=4]
 [ext_resource path="res://art/particles/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/smoke_07.png" type="Texture" id=5]
 
-[sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 12.8365, 822.18 )
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 47.7139, 738 )
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0, 0.205128, 1 )
@@ -33,38 +33,6 @@ orbit_velocity_random = 0.0
 scale_curve = SubResource( 5 )
 color_ramp = SubResource( 3 )
 
-[sub_resource type="Gradient" id=7]
-offsets = PoolRealArray( 0, 0.205128, 1 )
-colors = PoolColorArray( 0, 0, 0, 1, 0.942308, 0.942308, 0.942308, 1, 1, 1, 1, 1 )
-
-[sub_resource type="GradientTexture" id=8]
-gradient = SubResource( 7 )
-
-[sub_resource type="Curve" id=9]
-_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.772727 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=10]
-curve = SubResource( 9 )
-
-[sub_resource type="ParticlesMaterial" id=11]
-flag_disable_z = true
-spread = 180.0
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 1000.0
-initial_velocity_random = 1.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-scale_curve = SubResource( 10 )
-color_ramp = SubResource( 8 )
-
-[sub_resource type="Environment" id=12]
-background_mode = 4
-glow_enabled = true
-glow_intensity = 0.5
-glow_blend_mode = 0
-glow_hdr_luminance_cap = 2.0
-glow_bicubic_upscale = true
-
 [node name="LaserPowerUp" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -78,8 +46,8 @@ scale = Vector2( 0.267822, 6.44336 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -1.42783, -785.192 )
-shape = SubResource( 13 )
+position = Vector2( -1, -742 )
+shape = SubResource( 7 )
 
 [node name="Smoke07" type="Sprite" parent="Area2D"]
 position = Vector2( 7, -884.001 )
@@ -111,10 +79,8 @@ texture = ExtResource( 2 )
 visible = false
 scale = Vector2( 0.2, 0.2 )
 lifetime = 0.3
-process_material = SubResource( 11 )
 texture = ExtResource( 2 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 12 )
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
