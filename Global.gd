@@ -30,7 +30,7 @@ var invinciblepuDuration = 4
 var laserPowerUp = false
 var laserPowerUpActive = false
 var laserPowerUpAvail = false
-var laserPowerUpDuration = 1.5
+var laserPowerUpDuration = 2.5
 
 
 var cloneMaxBullet =1 
@@ -80,7 +80,7 @@ func reset():
 	laserPowerUp = false
 	laserPowerUpActive = false
 	laserPowerUpAvail = false
-	laserPowerUpDuration = 1.5
+	laserPowerUpDuration = 2.5
 	
 	clone = false
 	cloneActive = false
