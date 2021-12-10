@@ -28,6 +28,9 @@ func kill():
 		randomize()
 		var rng = rand_range(0, 100)
 		print("rng: " + str(rng))
+		
+		rng = 100
+		
 		if rng <= 10:
 			var extrabulletpowerup = preload("res://ExtraBulletPowerUp.tscn")
 			var _extrabulletpowerup = extrabulletpowerup.instance()
@@ -48,11 +51,16 @@ func kill():
 			var _clonepowerup = clonepowerup.instance()
 			_clonepowerup.position = Vector2(position.x + get_parent().position.x + 100, position.y + get_parent().position.y + 50)	
 			get_parent().get_parent().call_deferred("add_child", _clonepowerup)
-		elif rng <=43:
+		elif rng <= 43:
 			var invincible = preload("res://InvinciblePowerUp.tscn")
 			var invinciblepuactive= invincible.instance()
 			invinciblepuactive.position = Vector2(position.x, position.y)
-			get_parent().add_child(invinciblepuactive)
+			get_parent().get_parent().add_child(invinciblepuactive)
+		else:
+			var timepowerup = preload("res://TimePowerUp.tscn")
+			var _timepowerup = timepowerup.instance()
+			_timepowerup.position = Vector2(position.x + get_parent().position.x, position.y + get_parent().position.y + 50)	
+			get_parent().get_parent().call_deferred("add_child", _timepowerup)
 			
 	Global.shooterHP -= 1
 	
