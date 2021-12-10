@@ -41,7 +41,7 @@ func _physics_process(delta):
 		firedlaser.position = Vector2(position.x, position.y)
 		get_parent().add_child(firedlaser)
 		yield(get_tree().create_timer(3),"timeout")
-		firedlaser.queue_free()
+		Global.laserPowerUp = false
 		
 	if Global.lightningPowerUp == true:
 		var lightning = preload("res://LaserPowerUp_2.tscn")
