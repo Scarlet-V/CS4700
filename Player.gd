@@ -36,12 +36,14 @@ func _physics_process(delta):
 	#	Global.lightningPowerUp = false
 	
 	if Global.laserPowerUp:
+		Global.laserPowerUp = false
+		Global.laserPowerUpActive = true
 		var laser = preload("res://LaserPowerUp.tscn")
 		var firedlaser = laser.instance()
-		firedlaser.position = Vector2(position.x, position.y)
-		get_parent().add_child(firedlaser)
-		yield(get_tree().create_timer(3),"timeout")
-		Global.laserPowerUp = false
+		add_child(firedlaser)
+		yield(get_tree().create_timer(Global.laserPowerUpDuration),"timeout")
+		firedlaser.queue_free()
+		Global.laserPowerUpActive = false
 		
 	if Global.lightningPowerUp:
 		var lightning = preload("res://LaserPowerUp_2.tscn")
@@ -68,6 +70,7 @@ func _physics_process(delta):
 		cloneactive.position = Vector2(position.x+100, position.y)
 		get_parent().add_child(cloneactive)
 		yield(get_tree().create_timer(Global.clonepuDuration),"timeout")
+		
 		
 
 func fire():
@@ -97,22 +100,6 @@ func fire():
 		if Global.currentBullet == 0:
 			Global.bulletAvailable = false
 			reload()
-		
-func laser():
-	var laser = preload("res://LaserPowerUp.tscn")
-	var firedlaser = laser.instance()
-	firedlaser.position = Vector2(position.x, position.y)
-	get_parent().call_deferred("add_child", firedlaser)
-	firedlaser.queue_free()
-	#Global.laserPowerUp = false
-	#yield(get_tree().create_timer(2),"timeout")
-	#firedlaser.queue_free()
-	#Global.laserPowerUp = true
-	#$LaserPowerUp.enabled = true
-	#$LaserPowerUp.visible = true
-	#if raycast.is_colliding():
-	#	var collide = raycast.get_collider()
-		#print(raycast.get_collider().has_method())
 
 func reload():
 	print("RELOADING")
