@@ -8,8 +8,9 @@ func _physics_process(delta):
 	position.y += move_speed * delta 
 	if Global.clone == true:
 		if Input.is_action_just_pressed("ui_accept") && Global.clonebulletAvailable == true:
-			print("I am not firing")
+			print("clone fired")
 			fire()
+			
 	
 	
 	
@@ -21,7 +22,7 @@ func _on_ClonePU_body_entered(body):
 
 func fire():
 	if get_tree().get_current_scene().get_name() == "Variant":
-		var clonebullet = preload("res://CloneBullet.tscn")
+		var clonebullet = load("res://CloneBullet.tscn")
 		var clonefiredbullet = clonebullet.instance()
 		clonefiredbullet.position = Vector2(position.x, position.y)
 		get_parent().call_deferred("add_child", clonefiredbullet)
@@ -38,3 +39,4 @@ func reload():
 	Global.clonebulletAvailable = true
 
 
+	
