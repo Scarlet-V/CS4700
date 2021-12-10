@@ -7,23 +7,12 @@ var delay = 1;
 func _physics_process(delta):
 	position.y += move_speed * delta
 
-#func _on_RapidFirePU_body_entered(body):
-#	var timer = Timer.new()
-#	timer.set_wait_time(1.0)
-#	# I tried getting this to auto fire for around 
-#	# 10 shots with one second in delay
-#	# could not get it to work properly
-#	if body.name == "Player":
-#		start()
+
 		
 func _on_RapidFirePU_body_entered(body):
 	if body.name == "Player":
 		queue_free()
 		Global.rapidfirepu = true
-		#start()
-		#Global.currentBullet += 10
-#   This code should work in theory but it does not reset after rapidfirepu is 
-#   false even if i force reset the currentbullet and max bullet
 
 #func start():
 #	#Global.currentBullet = 1000
